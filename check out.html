@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking</title>
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/parking.css" />
+  <link rel="stylesheet" href="/css/checkout.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images/Dockvile Logo.png" alt="" />
+    </div>
+
+    <div class="nav-items">
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/Parking icon.svg" alt="" />
+            <p>Parking</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/tire icon.svg" alt="" />
+            <p>Tire</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/battery icon.svg" alt="" />
+            <p>Battery</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/dash board icon.svg" alt="" />
+            <p>Dashboard</p>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/simple-line-icons_logout.svg" alt="" />
+            <p>LogOut</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div>
+      <div class="header">
+
+        <div class="left-section">Parking</div>
+
+        <div class="right-section">
+          <img class="Notification" src="/images/Header-Notification.svg" alt="" />
+          <img class="shopping" src="/images/Header-Shopping chart.svg" alt="" />
+          <img class="img" src="/images/Header-img.png" alt="profile-pic" />
+        </div>
+      </div>
+    </div>
+
+    <section>
+
+      <div class="checkout-section">
+        <h3>Selected items</h3>
+
+        <div class="checkout-items">
+
+          <div class="checkout-item-img">
+            <img src="/images/battery.png" alt="">
+          </div>
+
+          <div class="checkout-item-description-section">
+            <h5>Battery</h5>
+            <div>
+              <div class="checkout-item-description">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero fugiat quaerat, molestiae.</p>
+              </div>
+            </div>
+            <button>
+              <img src="/images/material-symbols_delete-outline.svg" alt="">
+              <div>REMOVE ITEM</div>
+            </button>
+          </div>
+
+          <div class="item-class-section">
+
+            <div class="item-price">
+              <h3>150000</h3>
+            </div>
+
+            <div class="item-quantity">
+              <button>&#43;</button>
+
+              <div class="cart-item-number">2</div>
+
+              <button>&#8722;</button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <div class="checkout-left-section">
+
+        <div class="payment-section">
+          <h3>check Out</h3>
+
+          <table>
+            <tr>
+              <th>
+                <h5>Items</h5>
+              </th>
+              <th>
+                <h5>Price</h5>
+              </th>
+            </tr>
+            <tr>
+              <td>Apple</td>
+              <td>$1</td>
+            </tr>
+            <tr>
+              <td>Banana</td>
+              <td>$0.5</td>
+            </tr>
+            <tr>
+              <th>
+                <h5>Total</h5>
+              </th>
+              <th>
+                <h5>Price</h5>
+              </th>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="payment-method-section">
+          <h4>Payment Method</h4>
+
+          <div>
+
+            <div class="cash-div">
+              <input type="radio" id="cash" name="payment" value="cash">
+              <label for="cash">cash</label>
+            </div>
+
+            <div class="mobile-div">
+              <input type="radio" id="Mobile-Money" name="payment" value="Mobile-Money">
+              <label for="Mobile-Money">Mobile Money</label><br>
+
+              <form id="form" action="#" style="max-width: 250px;">
+
+                <div class="input-control" style="width: 200px;">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input id="phoneNumber" name="phoneNumber" type="text" />
+                  <div class="error"></div>
+                </div>
+
+                <button type="submit">Initiate</button>
+
+              </form>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="/js/checkout.js"></script>
+</body>
+
+</html>

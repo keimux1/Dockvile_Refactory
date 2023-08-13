@@ -1,0 +1,128 @@
+.checkout-left-section{
+    display: flex;
+    flex-direction: column;
+}
+.checkout-section{
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.checkout-items{
+    background-color: rgb(252, 245, 235);
+    padding: 8px;
+    border-radius: 8px;
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+}
+
+.checkout-item-description-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:200px;
+}
+
+.checkout-item-description-section p{
+    font-size: 12px;
+}
+
+.checkout-item-description-section button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 130px;
+    white-space: nowrap;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: rgb(250, 250, 250);
+    color: #8208F3;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.checkout-item-description-section button:hover{
+   
+    border-radius: 4px;
+    background-color: rgb(250, 250, 250);
+    color: #75c1fb;
+    cursor: pointer;
+    background-color: #ecd7ff;
+}
+
+.item-class-section{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-quantity{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.item-quantity button{
+    background-color: #75c1fb;
+    border-radius: 4px;
+    border:none;
+    color: #8208F3;
+    padding: 4px;
+    font-size: 14px;
+}
+
+.item-quantity button:hover{
+    background-color: #5b88ab;
+    border-radius: 4px;
+    border:none;
+    padding: 4px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+/* payment-section */
+.payment-section{
+    margin-top: 16px;
+    margin-left: 24px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-section table{
+    border-collapse: collapse;
+    margin-top: 24px;
+    width: 200px;
+}
+
+.payment-section table th{
+    padding-top: 8px;
+    padding-bottom: 16px;
+    text-align: start;
+    height: 8px;
+}
+
+.payment-section table td{
+    padding: 2px 0px;
+    font-size: 12px;
+    text-align: start;
+    height: 8px;
+}
+
+.payment-method-section{
+    margin-top: 16px;
+    margin-left: 24px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cash-div , .mobile-div{
+    padding: 4px;
+    background-color: #ebe8ee;
+    border-radius: 6px;
+    max-width: 250px;
+    margin-top: 16px;
+}
+

@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popins", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 5px;
+  width: 100vw;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4px;
+}
+
+/* be care full withthe .container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* max-width: 280px; */
+  background: rgba(224, 221, 221, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 4px;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  width: 100%;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 24px;
+  height: 40px;
+  width: calc(100% / 2);
+  color: white;
+  background-color: #8208f3;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 24px;
+  cursor: pointer;
+}
+
+.input-control-special {
+  margin-top: 16px;
+  display: flex;
+  width: 350px;
+  gap: 16px;
+  justify-content: space-between;
+  /* background-color: #8208F3; */
+}
+
+.input-control-special .input-dropdown select {
+  height: 30px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 1px;
+}
+
+.input-control label {
+  margin-top: 16px;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  margin: 0px;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 8px;
+  /* height: 13px; */
+  margin-top: 1px;
+  padding: 0;
+}
+
+/* available parking section */
+.available-parking-section {
+  margin-left: 8px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(224, 221, 221, 0.5);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  border-radius: 8px;
+  max-width: 900px;
+}
+
+.available-parking-slots {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 100%;
+  padding: 4px;
+  margin: 4px;
+}
+
+/* .Truck-section, .Personal-car-section, .Taxi-section, .Coaster-section, .Boda-section{
+max-width: 290px;
+} */
+
+.trucks,
+.personalcars,
+.taxis,
+.coasters,
+.bodas {
+  background-color: rgba(130, 8, 243, 1);
+  padding: 4px 2px;
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.personalcars {
+  background-color: rgba(203, 0, 172, 1);
+}
+
+.taxis {
+  background-color: rgba(0, 149, 255, 1);
+}
+
+.coasters {
+  background-color: rgba(25, 239, 84, 1);
+}
+
+.bodas {
+  background-color: rgba(85, 184, 255, 1);
+}
+
+
+.available-parking-section {
+  display: flex;
+}
+.available-parking-slots{
+background-color: #f0f2f3;
+padding: 4px;
+border-radius: 8px;
+}
+
+.parking-progress{
+background-color :#f0f2f3;
+padding: 4px;
+margin: 2px;
+margin-top: 48px;
+border-radius: 8px;
+width: 100%;
+display: flex;
+gap: 16px;
+}
+
+.parking-progress-card{
+ background-color: #d2d8db;
+ border-radius: 8px;
+ flex: 1;
+ max-width: 200px;
+ white-space: nowrap;
+ padding: 8px;
+}
+
+.veichle-parking-progress-card {
+display: flex;
+justify-content: space-between;
+margin-bottom: 16px;
+}
+
+
+/* Progress bar container */
+.veichle-progress {
+  width: 100%;
+  height: 20px;
+  border-radius: 16px;
+}
+
+/* Progress bar */
+.veichle-progress-bar {
+  height: 100%;
+  text-align: center;
+  line-height: 20px;
+  color: white;
+  border-radius: 16px;
+}
+
+.truck-progress .veichle-progress {
+background-color:  rgb(199, 167, 228);
+}
+
+.truck-progress .veichle-progress-bar {
+background-color:  rgba(130, 8, 243, 1);
+width: 50%;
+}
+
+.personalcars-progress .veichle-progress {
+background-color: rgb(234, 170, 225);
+}
+
+.personalcars-progress .veichle-progress-bar {
+background-color: rgba(203, 0, 172, 1);
+}
+
+.taxi-progress .veichle-progress {
+background-color: rgb(172, 210, 237);
+}
+
+.taxi-progress .veichle-progress-bar {
+background-color: rgba(0, 149, 255, 1);
+}
+
+.coaster-progress .veichle-progress {
+background-color: rgb(174, 220, 187);
+}
+
+.coaster-progress .veichle-progress-bar {
+background-color: rgba(25, 239, 84, 1);
+}
+
+.boda-progress .veichle-progress {
+background-color: rgb(187, 217, 239);
+}
+
+.boda-progress .veichle-progress-bar {
+background-color: rgba(85, 184, 255, 1);
+}

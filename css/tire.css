@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popins", sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 5px;
+  width: 100vw;
+}
+
+.button-section {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(227, 225, 225);
+  margin: 8px;
+  padding: 8px;
+  gap: 8px;
+}
+
+.button-section button {
+  flex: 1;
+  max-width: 150px;
+  white-space: nowrap;
+  padding: 8px 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #dbc2f3;
+  color: rgba(130, 8, 243, 1);
+}
+
+.button-section button:hover {
+  background-color: rgba(204, 176, 230, 1);
+  color: rgba(85, 184, 255, 1);
+}
+
+.button-section button:active {
+  background-color: rgba(219, 194, 243, 0.4);
+  color: rgba(148, 133, 146, 1);
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4px;
+}
+
+/* be care full withthe .container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  /* max-width: 280px; */
+  background: rgba(224, 221, 221, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: 4px;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  width: 100%;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 24px;
+  height: 40px;
+  width: calc(100% / 2);
+  color: white;
+  background-color: #8208f3;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 24px;
+  cursor: pointer;
+}
+
+.input-control-special {
+  margin-top: 16px;
+  display: flex;
+  width: 350px;
+  gap: 16px;
+  justify-content: space-between;
+  /* background-color: #8208F3; */
+}
+
+.input-control-special .input-dropdown select {
+  height: 30px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  gap: 1px;
+}
+
+.input-control label {
+  margin-top: 16px;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+  margin: 0px;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 8px;
+  /* height: 13px; */
+  margin-top: 1px;
+  padding: 0;
+}

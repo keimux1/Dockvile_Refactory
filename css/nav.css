@@ -1,0 +1,107 @@
+
+.navbar{
+  top: 0;
+  left: 0;
+  height: 100vh;
+  flex:1;
+  max-width: 200px;
+  z-index:1;
+  color: #f8f6f6;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(67, 3, 128);
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-items ul{
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  gap: 1px;
+  margin-bottom: 16px;
+}
+
+
+.logo img{
+  padding: 8px;
+  width: 100%;
+  object-fit: cover;
+} 
+
+ul{
+  list-style: none;
+  padding: 0 8px;
+}
+
+ul li{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  color: #f7f0f0;
+  text-decoration: none;
+}
+
+a .silent-space{
+  width: 10px;
+  height: 100%;
+  background-color: rgb(135, 8, 246);
+  display: none;
+}
+
+a img{
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  filter: saturate(5);
+  /* color: #f7f0f0; */
+  margin-right: 16px;
+  
+}
+
+a:hover{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  color: rgb(8, 243, 231) !important;
+}
+
+a:active{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  color:  rgb(202, 154, 247) !important;
+}
+
+a:active .silent-space{
+  width: 10px;
+  height: 100%;
+  color: rgb(135, 8, 246);
+  background-color: rgb(135, 8, 246);
+  display: block;
+}
+
+.silent-space span:active{
+color: rgba(130, 8, 243, 1);
+/* display: none; */
+}

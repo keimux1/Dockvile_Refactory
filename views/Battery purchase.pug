@@ -1,0 +1,298 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Tires purchase
+  link(rel='stylesheet' href='/css/nav.css')
+  link(rel='stylesheet' href='/css/header.css')
+  link(rel='stylesheet' href='/css/tire.css')
+  link(rel='stylesheet' href='/css/Shoping grid.css')
+nav.navbar
+  .logo
+    img(src='/images/Dockvile Logo.png' alt='')
+  .nav-items
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/Parking icon.svg' alt='')
+          p Parking
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/tire icon.svg' alt='')
+          p Tire
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/battery icon.svg' alt='')
+          p Battery
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/dash board icon.svg' alt='')
+          p Dashboard
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/simple-line-icons_logout.svg' alt='')
+          p LogOut
+main
+  div
+    .header
+      .left-section Tires
+      .right-section
+        img.Notification(src='/images/Header-Notification.svg' alt='')
+        img.shopping(src='/images/Header-Shopping chart.svg' alt='')
+        img.img(src='/images/Header-img.png' alt='profile-pic')
+  .button-section
+    button(type='submit') Tire Purchase
+    button(type='submit') Tire Pressure
+    button(type='submit') Puncture Fixing
+    button(type='submit') Valves
+  section
+    .container
+      form#form(action='#')
+        h4 Battery purchase
+        .input-control
+          label(for='fullName') Full Name
+          input#fullName(name='fullName' type='text')
+          .error
+        .input-control
+          label(for='phoneNumber') Phone Number
+          input#phoneNumber(name='phoneNumber' type='text')
+          .error
+        .input-control
+          label(for='nin') NIN
+          input#nin(name='nin' type='text')
+          .error
+        .input-control-special
+          .input-dropdown
+            label(for='vehicles') Choose a vehicle:
+            select#vehicles(name='vehicles')
+              option(value='truck') Truck
+              option(value='personalCar')
+                | Personal Car(below 5 seats)
+              option(value='taxi') Taxi(below 5 seats)
+              option(value='coaster') Coaster(above 14 seats)
+              option(value='boda') Boda
+        .input-control-special
+          .input-dropdown
+            label(for='battery-type') Type of Battery:
+            select#battery-type(name='battery-type')
+              option(value='truck') Good Year
+              option(value='personalCar')
+                | Dunlop
+              option(value='taxi') Toyo Tire
+              option(value='coaster') Michelin
+        .input-control
+          label(for='bartterynumber') Number of batteries
+          input#bartterynumber(name='bartterynumber' type='number')
+          .error
+        button(type='submit') Enter Purchase
+    .product-grid
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+      .card
+        .product-img
+          img.brand-pic(src='/images/battery.png' alt='yire')
+        .card-des
+          .product-name
+            p.brand Dunlop
+          .product-description
+            p.description
+              | tubless,20 inch,all wether,225mm wide,...
+              // Aspect Ratios – P225,Speed Rating –P225
+          .product-price
+            p.price 100,000
+          .card-inter
+            .card-rem
+              .card-rem-progress
+                .prog-out
+                  .prog-In
+              .card-rem-text
+                p.rem-no 30
+                p.rem Remaining
+            .add-button
+              button Add to Chart
+script(src='/js/Battery Input.js')

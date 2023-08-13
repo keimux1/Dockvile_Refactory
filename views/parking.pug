@@ -1,0 +1,446 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parking
+  link(rel='stylesheet' href='/css/nav.css')
+  link(rel='stylesheet' href='/css/header.css')
+  link(rel='stylesheet' href='/css/parking.css')
+nav.navbar
+  .logo
+    img(src='/images/Dockvile Logo.png' alt='')
+  .nav-items
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/Parking icon.svg' alt='')
+          p Parking
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/tire icon.svg' alt='')
+          p Tire
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/battery icon.svg' alt='')
+          p Battery
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/dash board icon.svg' alt='')
+          p Dashboard
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/simple-line-icons_logout.svg' alt='')
+          p LogOut
+main
+  div
+    .header
+      .left-section Parking
+      .right-section
+        img.Notification(src='/images/Header-Notification.svg' alt='')
+        img.shopping(src='/images/Header-Shopping chart.svg' alt='')
+        img.img(src='/images/Header-img.png' alt='profile-pic')
+  section
+    .container
+      form#form(action='#')
+        h1 Registration
+        .input-control
+          label(for='fullName') Full Name
+          input#fullName(name='fullName' type='text')
+          .error
+        .input-control
+          label(for='phoneNumber') Phone Number
+          input#phoneNumber(name='phoneNumber' type='text')
+          .error
+        .input-control
+          label(for='nin') NIN
+          input#nin(name='nin' type='text')
+          .error
+        .input-control
+          label(for='numberPlate') Number Plate
+          input#numberPlate(name='numberPlate' type='text')
+          .error
+        .input-control-special
+          .input-dropdown
+            label(for='vehicles') Choose a vehicle:
+            select#vehicles(name='vehicles')
+              option(value='truck') Truck
+              option(value='personalCar')
+                | Personal Car(below 5 seats)
+              option(value='taxi') Taxi(below 5 seats)
+              option(value='coaster') Coaster(above 14 seats)
+              option(value='boda') Boda
+          .input-color
+            label(for='color') Color:
+            input#color(type='color' name='color')
+        .input-control
+          label(for='parkingSlot') Assign Parking Slot
+          input#parkingSlot(name='parkingSlot' type='text')
+          .error
+        button(type='submit') Check In
+    .available-parking-section
+      .available-parking-slots
+        h4 Available-parking-slots
+        br
+        .Truck-section
+          h5 Trucks
+          table
+            tr
+              td
+                .trucks t1
+              td
+                .trucks t2
+              td
+                .trucks t3
+              td
+                .trucks t4
+              td
+                .trucks t5
+              td
+                .trucks t6
+              td
+                .trucks t7
+              td
+                .trucks t8
+              td
+                .trucks t9
+              td
+                .trucks t10
+              td
+                .trucks t11
+              td
+                .trucks t12
+              td
+                .trucks t13
+            tr
+              td
+                .trucks t14
+              td
+                .trucks t15
+              td
+                .trucks t16
+              td
+                .trucks t17
+              td
+                .trucks t18
+              td
+                .trucks t19
+              td
+                .trucks t20
+              td
+                .trucks t21
+              td
+                .trucks t22
+              td
+                .trucks t23
+              td
+                .trucks t24
+              td
+                .trucks t26
+              td
+                .trucks t26
+        .Personal-car-section
+          h5 Personal-cars
+          table
+            tr
+              td
+                .personalcars Pc1
+              td
+                .personalcars Pc2
+              td
+                .personalcars Pc3
+              td
+                .personalcars Pc4
+              td
+                .personalcars Pc5
+              td
+                .personalcars Pc6
+              td
+                .personalcars Pc7
+              td
+                .personalcars Pc8
+              td
+                .personalcars Pc9
+              td
+                .personalcars Pc10
+              td
+                .personalcars Pc11
+              td
+                .personalcars Pc12
+              td
+                .personalcars Pc13
+            tr
+              td
+                .personalcars Pc14
+              td
+                .personalcars Pc15
+              td
+                .personalcars Pc16
+              td
+                .personalcars Pc17
+              td
+                .personalcars Pc18
+              td
+                .personalcars Pc19
+              td
+                .personalcars Pc20
+              td
+                .personalcars Pc21
+              td
+                .personalcars Pc22
+              td
+                .personalcars Pc23
+              td
+                .personalcars Pc24
+              td
+                .personalcars Pc26
+              td
+                .personalcars Pc26
+        .Taxi-section
+          h5 Taxi
+          table
+            tr
+              td
+                .taxis Tx1
+              td
+                .taxis Tx2
+              td
+                .taxis Tx3
+              td
+                .taxis Tx4
+              td
+                .taxis Tx5
+              td
+                .taxis Tx6
+              td
+                .taxis Tx7
+              td
+                .taxis Tx8
+              td
+                .taxis Tx9
+              td
+                .taxis Tx10
+              td
+                .taxis Tx11
+              td
+                .taxis Tx12
+              td
+                .taxis Tx13
+            tr
+              td
+                .taxis Tx14
+              td
+                .taxis Tx15
+              td
+                .taxis Tx16
+              td
+                .taxis Tx17
+              td
+                .taxis Tx18
+              td
+                .taxis Tx19
+              td
+                .taxis Tx20
+              td
+                .taxis Tx21
+              td
+                .taxis Tx22
+              td
+                .taxis Tx23
+              td
+                .taxis Tx24
+              td
+                .taxis Tx26
+              td
+                .taxis Tx26
+        .Coaster-section
+          h5 Coaster
+          table
+            tr
+              td
+                .coasters C1
+              td
+                .coasters C2
+              td
+                .coasters C3
+              td
+                .coasters C4
+              td
+                .coasters C5
+              td
+                .coasters C6
+              td
+                .coasters C7
+              td
+                .coasters C8
+              td
+                .coasters C9
+              td
+                .coasters C10
+              td
+                .coasters C11
+              td
+                .coasters C12
+              td
+                .coasters C13
+            tr
+              td
+                .coasters C14
+              td
+                .coasters C15
+              td
+                .coasters C16
+              td
+                .coasters C17
+              td
+                .coasters C18
+              td
+                .coasters C19
+              td
+                .coasters C20
+              td
+                .coasters C21
+              td
+                .coasters C22
+              td
+                .coasters C23
+              td
+                .coasters C24
+              td
+                .coasters C26
+              td
+                .coasters C26
+        .Boda-section
+          h5 Boda
+          table
+            tr
+              td
+                .bodas B1
+              td
+                .bodas B2
+              td
+                .bodas B3
+              td
+                .bodas B4
+              td
+                .bodas B5
+              td
+                .bodas B6
+              td
+                .bodas B7
+              td
+                .bodas B8
+              td
+                .bodas B9
+              td
+                .bodas B10
+              td
+                .bodas B11
+              td
+                .bodas B12
+              td
+                .bodas B13
+            tr
+              td
+                .bodas B14
+              td
+                .bodas B15
+              td
+                .bodas B16
+              td
+                .bodas B17
+              td
+                .bodas B18
+              td
+                .bodas B19
+              td
+                .bodas B20
+              td
+                .bodas B21
+              td
+                .bodas B22
+              td
+                .bodas B23
+              td
+                .bodas B24
+              td
+                .bodas B26
+              td
+                .bodas B26
+      .parking-progress
+        .parking-progress-card
+          .truck-progress
+            .veichle-parking-progress-card
+              .progress-card-data
+                | Trucks
+                h1 30
+              img(src='/images/truck-card icons.svg' alt='truck')
+            div
+              .veichle-progress
+                // Progress bar
+                #truck-progress-bar.veichle-progress-bar(style='width: 0%')
+                  // Progress text
+                  span 0%
+        .parking-progress-card
+          .personalcars-progress
+            .veichle-parking-progress-card
+              .progress-card-data
+                | Personal Car
+                h1 30
+              img(src='/images/personal-card icons.svg' alt='truck')
+            div
+              .veichle-progress
+                // Progress bar
+                #personalcar-progress-bar.veichle-progress-bar(style='width: 0%')
+                  // Progress text
+                  span 0%
+        .parking-progress-card
+          .taxi-progress
+            .veichle-parking-progress-card
+              .progress-card-data
+                | Taxi
+                h1 30
+              img(src='/images/Taxi-card icons.svg' alt='truck')
+            div
+              .veichle-progress
+                // Progress bar
+                #taxi-progress-bar.veichle-progress-bar(style='width: 0%')
+                  // Progress text
+                  span 0%
+        .parking-progress-card
+          .coaster-progress
+            .veichle-parking-progress-card
+              .progress-card-data
+                | Coaster
+                h1 30
+              img(src='/images/coaster-card icons.svg' alt='truck')
+            div
+              .veichle-progress
+                // Progress bar
+                #coaster-progress-bar.veichle-progress-bar(style='width: 0%')
+                  // Progress text
+                  span 0%
+        .parking-progress-card
+          .boda-progress
+            .veichle-parking-progress-card
+              .progress-card-data
+                | Boda
+                h1 30
+              img(src='/images/Boda-card icons.svg' alt='truck')
+            div
+              .veichle-progress
+                // Progress bar
+                #boda-progress-bar.veichle-progress-bar(style='width: 0%')
+                  // Progress text
+                  span 0%
+script(src='/js/Parking Input .js')

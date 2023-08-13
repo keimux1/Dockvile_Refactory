@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tire Pressure</title>
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/tire.css" />
+  <link rel="stylesheet" href="/css/Shoping grid.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images/Dockvile Logo.png" alt="" />
+    </div>
+
+    <div class="nav-items">
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/Parking icon.svg" alt="" />
+            <p>Parking</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/tire icon.svg" alt="" />
+            <p>Tire</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/battery icon.svg" alt="" />
+            <p>Battery</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/dash board icon.svg" alt="" />
+            <p>Dashboard</p>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/simple-line-icons_logout.svg" alt="" />
+            <p>LogOut</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div>
+      <div class="header">
+        <div class="left-section">Tires</div>
+
+        <div class="right-section">
+          <img class="Notification" src="/images/Header-Notification.svg" alt="" />
+          <img class="shopping" src="/images/Header-Shopping chart.svg" alt="" />
+          <img class="img" src="/images/Header-img.png" alt="profile-pic" />
+        </div>
+      </div>
+    </div>
+
+    <div class="button-section">
+      <button type="submit">Tire Purchase</button>
+      <button type="submit">Tire Pressure</button>
+      <button type="submit">Puncture Fixing</button>
+      <button type="submit">Valves</button>
+    </div>
+
+    <div class="container">
+        <form id="form" action="#">
+          <h4>Tire purchase</h4>
+          <div class="input-control">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" name="phoneNumber" type="text" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control-special">
+            <div class="input-dropdown">
+              <label for="vehicles">Choose a vehicle:</label>
+              <select name="vehicles" id="vehicles">
+                <option value="truck">Truck</option>
+                <option value="personalCar">
+                  Personal Car(below 5 seats)
+                </option>
+                <option value="taxi">Taxi(below 5 seats)</option>
+                <option value="coaster">Coaster(above 14 seats)</option>
+                <option value="boda">Boda</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-control-special">
+            <div class="input-dropdown">
+              <label for="tire-type">Type of Tire:</label>
+              <select name="tire-type" id="tire-type">
+                <option value="truck">Good Year</option>
+                <option value="personalCar">
+                  Dunlop
+                </option>
+                <option value="taxi">Toyo Tire</option>
+                <option value="coaster">Michelin</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-control-special">
+            <div class="input-dropdown">
+              <label for="tire-size">Tire Size:</label>
+              <select name="tire-size" id="tire-size">
+                <option value="tire-size">235</option>
+                <option value="">
+                  225
+                </option>
+                <option value="">235</option>
+                <option value="">185</option>
+                <option value="">165</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="input-control">
+            <label for="tirenumber">Number of tires</label>
+            <input id="tirenumber" name="tirenumber" type="number" />
+            <div class="error"></div>
+          </div>
+
+          <button type="submit">Enter Purchase</button>
+        </form>
+      </div>
+    
+  </main>
+
+  <script src="/js/Tire Input.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b7bbbf;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+} */
+
+.analytics{
+  margin-top: 24px;
+  margin-left: 16px;
+  background-color: rgb(242, 246, 246);
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.skill{
+  width: 95px;
+  height: 95px;
+  position: relative;
+
+}
+
+.outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+  width: 95px;
+  padding: 2px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+  -3px -3px 15px -1px rgba(255,255,255,0.7);
+  border-radius: 50%;
+}
+
+.inner{
+  height: 75px;
+  width: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+  inset -2px -2px 3px -1px rgba(255,255,255,0.7),
+  -0.5px -0.5px 0px rgba(0,0,0,0.15),
+  0px 12px 10px -10px rgba(0,0,0,0.05);
+  border-radius: 50%;
+}
+
+#number{
+  font-weight: 600;
+  font-size: 24px;
+  color:#555
+}
+
+circle{
+  fill: none;
+  stroke: cornflowerblue;
+  stroke-width: 10px;
+  stroke-dasharray: 236;
+  stroke-dashoffset: 236;
+  animation: anim 2s linear forwards;
+}
+
+svg{
+  width:95px;
+  height: 95px;
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes anim {
+100%{
+  stroke-dashoffset: 82.6;
+}  
+}
+
+.dash-stat{
+display: flex;
+gap: 16px;
+}
+
+.dashboard-card{
+display: flex;
+flex-direction: column;
+gap: 16px;
+border: 1px solid rgb(209, 209, 209);
+border-radius: 16px;
+padding: 16px ;
+/* box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15); */
+background-color: rgba(210, 232, 232, 0.4);
+}
+
+.dashboard-card-top{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  min-width: 200px;
+  
+}
+
+.dashboard-card-top img{
+  top: 0;
+  right: 0;
+}
+
+.card-stats{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 18px;
+  width: 100%;
+}
+.card-stats-battery{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.prog{
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+
+}

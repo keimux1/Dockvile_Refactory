@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking</title>
+  <link rel="stylesheet" href="/css/nav.css" />
+  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/parking.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="/images/Dockvile Logo.png" alt="" />
+    </div>
+
+    <div class="nav-items">
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/Parking icon.svg" alt="" />
+            <p>Parking</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/tire icon.svg" alt="" />
+            <p>Tire</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/battery icon.svg" alt="" />
+            <p>Battery</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/dash board icon.svg" alt="" />
+            <p>Dashboard</p>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="">
+            <div class="silent-space"><span>t</span></div>
+            <img src="/images/simple-line-icons_logout.svg" alt="" />
+            <p>LogOut</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div>
+      <div class="header">
+        <div class="left-section">Parking</div>
+
+        <div class="right-section">
+          <img class="Notification" src="/images/Header-Notification.svg" alt="" />
+          <img class="shopping" src="/images/Header-Shopping chart.svg" alt="" />
+          <img class="img" src="/images/Header-img.png" alt="profile-pic" />
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="container">
+        <form id="form" action="#">
+          <h1>Registration</h1>
+          <div class="input-control">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" type="text" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" name="phoneNumber" type="text" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="nin">NIN</label>
+            <input id="nin" name="nin" type="text" />
+            <div class="error"></div>
+          </div>
+          <div class="input-control">
+            <label for="numberPlate">Number Plate</label>
+            <input id="numberPlate" name="numberPlate" type="text" />
+            <div class="error"></div>
+          </div>
+
+          <div class="input-control-special">
+            <div class="input-dropdown">
+              <label for="vehicles">Choose a vehicle:</label>
+              <select name="vehicles" id="vehicles">
+                <option value="truck">Truck</option>
+                <option value="personalCar">
+                  Personal Car(below 5 seats)
+                </option>
+                <option value="taxi">Taxi(below 5 seats)</option>
+                <option value="coaster">Coaster(above 14 seats)</option>
+                <option value="boda">Boda</option>
+              </select>
+            </div>
+            <div class="input-color">
+              <label for="color">Color:</label>
+              <input type="color" id="color" name="color" />
+            </div>
+          </div>
+
+          <div class="input-control">
+            <label for="parkingSlot">Assign Parking Slot</label>
+            <input id="parkingSlot" name="parkingSlot" type="text" />
+            <div class="error"></div>
+          </div>
+
+          <button type="submit">Check In</button>
+        </form>
+      </div>
+
+      <div class="available-parking-section">
+
+        <div class="available-parking-slots">
+          <h4>Available-parking-slots</h4>
+          <br>
+          <div class="Truck-section">
+            <h5>Trucks</h5>
+            <table>
+              <tr>
+                <td>
+                  <div class="trucks">t1</div>
+                </td>
+                <td>
+                  <div class="trucks">t2</div>
+                </td>
+                <td>
+                  <div class="trucks">t3</div>
+                </td>
+                <td>
+                  <div class="trucks">t4</div>
+                </td>
+                <td>
+                  <div class="trucks">t5</div>
+                </td>
+                <td>
+                  <div class="trucks">t6</div>
+                </td>
+                <td>
+                  <div class="trucks">t7</div>
+                </td>
+                <td>
+                  <div class="trucks">t8</div>
+                </td>
+                <td>
+                  <div class="trucks">t9</div>
+                </td>
+                <td>
+                  <div class="trucks">t10</div>
+                </td>
+                <td>
+                  <div class="trucks">t11</div>
+                </td>
+                <td>
+                  <div class="trucks">t12</div>
+                </td>
+                <td>
+                  <div class="trucks">t13</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="trucks">t14</div>
+                </td>
+                <td>
+                  <div class="trucks">t15</div>
+                </td>
+                <td>
+                  <div class="trucks">t16</div>
+                </td>
+                <td>
+                  <div class="trucks">t17</div>
+                </td>
+                <td>
+                  <div class="trucks">t18</div>
+                </td>
+                <td>
+                  <div class="trucks">t19</div>
+                </td>
+                <td>
+                  <div class="trucks">t20</div>
+                </td>
+                <td>
+                  <div class="trucks">t21</div>
+                </td>
+                <td>
+                  <div class="trucks">t22</div>
+                </td>
+                <td>
+                  <div class="trucks">t23</div>
+                </td>
+                <td>
+                  <div class="trucks">t24</div>
+                </td>
+                <td>
+                  <div class="trucks">t26</div>
+                </td>
+                <td>
+                  <div class="trucks">t26</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="Personal-car-section">
+            <h5>Personal-cars</h5>
+            <table>
+              <tr>
+                <td>
+                  <div class="personalcars">Pc1</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc2</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc3</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc4</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc5</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc6</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc7</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc8</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc9</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc10</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc11</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc12</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc13</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="personalcars">Pc14</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc15</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc16</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc17</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc18</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc19</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc20</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc21</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc22</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc23</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc24</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc26</div>
+                </td>
+                <td>
+                  <div class="personalcars">Pc26</div>
+                </td>
+              </tr>
+
+            </table>
+          </div>
+
+          <div class="Taxi-section">
+            <h5>Taxi</h5>
+            <table>
+              <tr>
+                <td>
+                  <div class="taxis">Tx1</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx2</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx3</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx4</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx5</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx6</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx7</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx8</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx9</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx10</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx11</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx12</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx13</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="taxis">Tx14</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx15</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx16</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx17</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx18</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx19</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx20</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx21</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx22</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx23</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx24</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx26</div>
+                </td>
+                <td>
+                  <div class="taxis">Tx26</div>
+                </td>
+              </tr>
+
+            </table>
+          </div>
+
+          <div class="Coaster-section">
+            <h5>Coaster</h5>
+            <table>
+              <tr>
+                <td>
+                  <div class="coasters">C1</div>
+                </td>
+                <td>
+                  <div class="coasters">C2</div>
+                </td>
+                <td>
+                  <div class="coasters">C3</div>
+                </td>
+                <td>
+                  <div class="coasters">C4</div>
+                </td>
+                <td>
+                  <div class="coasters">C5</div>
+                </td>
+                <td>
+                  <div class="coasters">C6</div>
+                </td>
+                <td>
+                  <div class="coasters">C7</div>
+                </td>
+                <td>
+                  <div class="coasters">C8</div>
+                </td>
+                <td>
+                  <div class="coasters">C9</div>
+                </td>
+                <td>
+                  <div class="coasters">C10</div>
+                </td>
+                <td>
+                  <div class="coasters">C11</div>
+                </td>
+                <td>
+                  <div class="coasters">C12</div>
+                </td>
+                <td>
+                  <div class="coasters">C13</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="coasters">C14</div>
+                </td>
+                <td>
+                  <div class="coasters">C15</div>
+                </td>
+                <td>
+                  <div class="coasters">C16</div>
+                </td>
+                <td>
+                  <div class="coasters">C17</div>
+                </td>
+                <td>
+                  <div class="coasters">C18</div>
+                </td>
+                <td>
+                  <div class="coasters">C19</div>
+                </td>
+                <td>
+                  <div class="coasters">C20</div>
+                </td>
+                <td>
+                  <div class="coasters">C21</div>
+                </td>
+                <td>
+                  <div class="coasters">C22</div>
+                </td>
+                <td>
+                  <div class="coasters">C23</div>
+                </td>
+                <td>
+                  <div class="coasters">C24</div>
+                </td>
+                <td>
+                  <div class="coasters">C26</div>
+                </td>
+                <td>
+                  <div class="coasters">C26</div>
+                </td>
+              </tr>
+
+            </table>
+          </div>
+
+          <div class="Boda-section">
+            <h5>Boda</h5>
+            <table>
+              <tr>
+                <td>
+                  <div class="bodas">B1</div>
+                </td>
+                <td>
+                  <div class="bodas">B2</div>
+                </td>
+                <td>
+                  <div class="bodas">B3</div>
+                </td>
+                <td>
+                  <div class="bodas">B4</div>
+                </td>
+                <td>
+                  <div class="bodas">B5</div>
+                </td>
+                <td>
+                  <div class="bodas">B6</div>
+                </td>
+                <td>
+                  <div class="bodas">B7</div>
+                </td>
+                <td>
+                  <div class="bodas">B8</div>
+                </td>
+                <td>
+                  <div class="bodas">B9</div>
+                </td>
+                <td>
+                  <div class="bodas">B10</div>
+                </td>
+                <td>
+                  <div class="bodas">B11</div>
+                </td>
+                <td>
+                  <div class="bodas">B12</div>
+                </td>
+                <td>
+                  <div class="bodas">B13</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="bodas">B14</div>
+                </td>
+                <td>
+                  <div class="bodas">B15</div>
+                </td>
+                <td>
+                  <div class="bodas">B16</div>
+                </td>
+                <td>
+                  <div class="bodas">B17</div>
+                </td>
+                <td>
+                  <div class="bodas">B18</div>
+                </td>
+                <td>
+                  <div class="bodas">B19</div>
+                </td>
+                <td>
+                  <div class="bodas">B20</div>
+                </td>
+                <td>
+                  <div class="bodas">B21</div>
+                </td>
+                <td>
+                  <div class="bodas">B22</div>
+                </td>
+                <td>
+                  <div class="bodas">B23</div>
+                </td>
+                <td>
+                  <div class="bodas">B24</div>
+                </td>
+                <td>
+                  <div class="bodas">B26</div>
+                </td>
+                <td>
+                  <div class="bodas">B26</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+        </div>
+
+        <div class="parking-progress">
+
+          <div class="parking-progress-card">
+            <div class="truck-progress">
+              <div class="veichle-parking-progress-card">
+
+                <div class="progress-card-data">
+                  Trucks
+                  <h1>30</h1>
+                </div>
+                <img src="/images/truck-card icons.svg" alt="truck">
+              </div>
+
+              <div>
+                <div class="veichle-progress">
+                  <!-- Progress bar -->
+                  <div class="veichle-progress-bar" id="truck-progress-bar" style="width: 0%">
+                    <!-- Progress text -->
+                    <span>0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="parking-progress-card">
+            <div class="personalcars-progress">
+              <div class="veichle-parking-progress-card">
+
+                <div class="progress-card-data">
+                  Personal Car
+                  <h1>30</h1>
+                </div>
+                <img src="/images/personal-card icons.svg" alt="truck">
+              </div>
+
+              <div>
+                <div class="veichle-progress">
+                  <!-- Progress bar -->
+                  <div class="veichle-progress-bar" id="personalcar-progress-bar" style="width: 0%">
+                    <!-- Progress text -->
+                    <span>0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="parking-progress-card">
+            <div class="taxi-progress">
+              <div class="veichle-parking-progress-card">
+
+                <div class="progress-card-data">
+                  Taxi
+                  <h1>30</h1>
+                </div>
+                <img src="/images/Taxi-card icons.svg" alt="truck">
+              </div>
+
+              <div>
+                <div class="veichle-progress">
+                  <!-- Progress bar -->
+                  <div class="veichle-progress-bar" id="taxi-progress-bar" style="width: 0%">
+                    <!-- Progress text -->
+                    <span>0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="parking-progress-card">
+            <div class="coaster-progress">
+              <div class="veichle-parking-progress-card">
+
+                <div class="progress-card-data">
+                  Coaster
+                  <h1>30</h1>
+                </div>
+                <img src="/images/coaster-card icons.svg" alt="truck">
+              </div>
+
+              <div>
+                <div class="veichle-progress">
+                  <!-- Progress bar -->
+                  <div class="veichle-progress-bar" id="coaster-progress-bar" style="width: 0%">
+                    <!-- Progress text -->
+                    <span>0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="parking-progress-card">
+            <div class="boda-progress">
+              <div class="veichle-parking-progress-card">
+
+                <div class="progress-card-data">
+                  Boda
+                  <h1>30</h1>
+                </div>
+                <img src="/images/Boda-card icons.svg" alt="truck">
+              </div>
+
+              <div>
+                <div class="veichle-progress">
+                  <!-- Progress bar -->
+                  <div class="veichle-progress-bar" id="boda-progress-bar" style="width: 0%">
+                    <!-- Progress text -->
+                    <span>0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="/js/Parking Input .js"></script>
+</body>
+
+</html>
