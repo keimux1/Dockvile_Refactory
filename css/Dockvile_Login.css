@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 0, 128, 0.2);
+  background-image: url(/images/Desktop\ -\ 12.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.container form {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  width: 100%;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#form button {
+  padding: 10px;
+  margin-top: 24px;
+  height: 40px;
+  width: calc(100%/2);
+  color: white;
+  background-color: #8208F3;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 24px;
+  cursor: pointer;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 250px;
+  margin-right: 10px;
+  /* width: 350px; */
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+/* 
+.user_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.feild {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 4px;
+}
+
+.feild input {
+  align-items: center;
+  justify-items: center;
+  border: 2px solid gray;
+  border-radius: 4px;
+  font-size: 12px;
+  width: 300px;
+  height: 40px;
+}
+
+.feild input:focus {
+  outline: 0;
+}
+
+/* to be activated with javascript */
+/* .feild.success input {
+  background-color: rgb(54, 220, 54);
+}
+
+.feild.error input {
+  background-color: rgb(220, 62, 54);
+}
+
+.feild .error{
+  background-color: rgb(220, 62, 54);
+  font-size: 8px;
+  height: 13px;
+} */ 

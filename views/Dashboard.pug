@@ -1,0 +1,187 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Dashboard
+  link(rel='stylesheet' href='/css/progress1.css')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js')
+  link(rel='stylesheet' href='/css/nav.css')
+  link(rel='stylesheet' href='/css/header.css')
+  link(rel='stylesheet' href='/css/parking.css')
+nav.navbar1
+  .logo
+    img(src='/images/Dockvile Logo.png' alt='')
+  .nav-items
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/Parking icon.svg' alt='')
+          p Parking
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/tire icon.svg' alt='')
+          p Tire
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/battery icon.svg' alt='')
+          p Battery
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/dash board icon.svg' alt='')
+          p Dashboard
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/simple-line-icons_logout.svg' alt='')
+          p LogOut
+main
+  div
+    .header
+      .left-section Darsh Board
+      .right-section
+        img.Notification(src='/images/Header-Notification.svg' alt='')
+        img.shopping(src='/images/Header-Shopping chart.svg' alt='')
+        img.img(src='/images/Header-img.png' alt='profile-pic')
+  .analytics
+    .dash-stat
+      .dashboard-card
+        .dashboard-card-top
+          div
+            p Parking
+            h2
+              | Ugx 
+              span 240000
+          img(src='/images/Upward Trend.svg' alt='')
+        br
+        .card-stats
+          .prog
+            .skill
+              .outer
+                .inner
+                  #number
+              svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
+                defs
+                  lineargradient#GradientColor
+                    stop(offset='0%' stop-='' color='#DA22FF')
+                    stop(offset='100%' stop-='' color='#9733EE')
+                circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
+          div
+            h4 115 of 200
+            br
+            p 30Truks
+            p 30 personal Cars
+            p 12 Taxis
+            p 2 Coasters
+            p 15 Bodas
+      .dashboard-card
+        .dashboard-card-top
+          div
+            p Tire
+            h2
+              | Ugx 
+              span 40000
+          img(src='/images/Upward Trend.svg' alt='')
+        br
+        .card-stats
+          .prog
+            .skill
+              .outer
+                .inner
+                  #number 2%
+              svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
+                defs
+                  lineargradient#GradientColor
+                    stop(offset='0%' stop-='' color='#DA22FF')
+                    stop(offset='100%' stop-='' color='#9733EE')
+                circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
+          div
+            h4 2 of 100
+            br
+            p 3 Dunlop
+      .dashboard-card
+        .dashboard-card-top
+          div
+            p Battery
+            h2
+              | Ugx 
+              span 240000
+          img(src='/images/Upward Trend.svg' alt='')
+        .card-stats-battery
+          .prog-rent
+            h5 Rent
+            br
+            .prog
+              .skill
+                .outer
+                  .inner
+                    #number 2%
+                svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
+                  defs
+                    lineargradient#GradientColor
+                      stop(offset='0%' stop-='' color='#DA22FF')
+                      stop(offset='100%' stop-='' color='#9733EE')
+                  circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
+            br
+            div
+              h4 1 of 100
+              br
+              p Battery1
+          .prog-rent
+            h5 Sold
+            br
+            .prog
+              .skill
+                .outer
+                  .inner
+                    #number 1%
+                svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
+                  defs
+                    lineargradient#GradientColor
+                      stop(offset='0%' stop-='' color='#DA22FF')
+                      stop(offset='100%' stop-='' color='#9733EE')
+                  circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
+            br
+            div
+              h4 1 of 100
+              br
+              p Battery1
+      .dashboard-card
+        .dashboard-card-top
+          div
+            p Total Revenue 
+            h2
+              | Ugx 
+              span 240000
+        .graph
+          canvas#myChart(width='40' height='40')
+          script(src='/js/graph.js')
+  .table-analytics(style='margin: 24px 24px ')
+    h4 Table Register
+    br
+    table
+      thead
+        tr
+          td
+            .table-analytics Employee
+          td
+            .table-analytics
+          td
+            .table-analytics t3
+          td
+            .table-analytics t4
+          td
+      tbody
+        tr
+          td
+            | keith
+script(src='/js/progress1.js')
