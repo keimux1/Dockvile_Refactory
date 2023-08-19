@@ -41,9 +41,15 @@ const isValidphoneNumber = phoneNumber => {
     return re.test(phoneNumber);
 }
 
-const isValidNumberPlate = numberPlateValue => {
-    const re = /^U[A-Z0-9]{5}$/;
-    return re.test(numberPlateValue);
+const isValidnin = nin=> {
+    const re = /^[A-Z0-9]{14}$/i;
+    return re.test(nin);
+  };
+  
+
+const isValidNumberPlate = numberPlate => {
+    const re = /^U[A-Z0-9]{2}\s[A-Z0-9]{3}\s[A-Z0-9]{2}$/i;
+    return re.test(numberPlate);
 }
 
 
@@ -73,17 +79,17 @@ const validateInputs = () => {
     }
 
     if(ninValue === '') {
-        setError(nin, 'nin is required');
-    } else if (ninValue.length<15) {
-        setError(nin, 'Enter a correct nin.')
+        setError(nin, 'NIN is required');
+    } else if (!isValidphoneNumber(ninValue)) {
+        setError(nin, 'Enter a correct NIN')
     } else {
         setSuccess(nin);
     }
 
     if(numberPlateValue === '') {
         setError(numberPlate, 'Enter a NumberPlate');
-    } else if (!isValidfullName(numberPlateValue)) {
-        setError(numberPlate, "start with a u and must be 6 characters");
+    } else if (!isValidNumberPlate(numberPlateValue)) {
+        setError(numberPlate, "start with a u and must be 7 characters");
     } else {
         setSuccess(numberPlate);
     }

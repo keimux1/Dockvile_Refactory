@@ -3,11 +3,11 @@ const mongoose = require('mongoose')
 const conneectDB = async ()=>{
   try{
     conn = await mongoose.connect(process.env.MONGO_URI)
-    console.log(`MOngoDB connected at: ${conn.connection.host}`)
+    console.log(`MongoDB connected at: ${conn.connection.host}`)
     // Or console.log("MOngoDB connected at: "+conn.connection.host)
 }
 catch(error){
-  console.log("MOngoDB connected at: "+error)
+  console.log("MongoDB connected at: "+error)
   process.exit(1)
 }
 }

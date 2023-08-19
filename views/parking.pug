@@ -52,7 +52,7 @@ main
         img.img(src='/images/Header-img.png' alt='profile-pic')
   section
     .container
-      form#form(action='#')
+      form#form(name="parkingform" method="POST" action='/api/regparking')
         h1 Registration
         .input-control
           label(for='fullName') Full Name
@@ -88,6 +88,7 @@ main
           input#parkingSlot(name='parkingSlot' type='text')
           .error
         button(type='submit') Check In
+        
     .available-parking-section
       .available-parking-slots
         h4 Available-parking-slots

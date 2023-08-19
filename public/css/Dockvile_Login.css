@@ -59,6 +59,16 @@ body {
   cursor: pointer;
 }
 
+#form button:hover {
+  color: rgb(166, 205, 237);
+  background-color: #9c46ec;
+}
+
+#form button:active {
+  color: rgb(138, 193, 238);
+  background-color: #453a4f;
+}
+
 .input-control {
   display: flex;
   flex-direction: column;

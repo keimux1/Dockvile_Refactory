@@ -6,7 +6,7 @@ head
   link(rel='stylesheet' href='/css/Dockvile_Login.css')
   script(defer='' src='/js/Signup.js')
 .container
-  form#form(action='#')
+  form#form(name="employeeform" method="POST" action='/api/regemployee')
     h1 Registration
     .input-control
       label(for='fullName') Full Name
@@ -18,9 +18,9 @@ head
       .error
     .input-control
       label(for='phoneNumber') Phone Number
-      input#phoneNumber(name='phoneNumber' type='email')
+      input#phoneNumber(name='phoneNumber' type='text')
       .error
-    .input-control
+    .input-control  
       label(for='password') Password
       input#password(name='password' type='password')
       .error

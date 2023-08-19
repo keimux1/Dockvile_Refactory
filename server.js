@@ -11,7 +11,7 @@ const app = express();
 const parkingRoutes = require("./controllers/parkingRoutes");
 const batteryRoutes = require("./controllers/batteryRoutes");
 const tireRoutes = require("./controllers/tireRoutes");
-const userRoutes = require("./controllers/userRoutes");
+const employeeRoutes = require("./controllers/employeeRoutes");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api", parkingRoutes);
 app.use("/api", batteryRoutes);
 app.use("/api", tireRoutes);
-app.use("/api", userRoutes);
+app.use("/api", employeeRoutes);
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);
