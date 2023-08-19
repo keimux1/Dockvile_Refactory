@@ -1,15 +1,9 @@
 const mongoose = require("mongoose");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
-const employeeSchema = new mongoose.Schema({
+const BatterySchema = new mongoose.Schema({
     fullName:{
         type: String,
-        required: true,
-        trim:true,
-    },
-    email:{
-        type: String,
-        unique: true,
         required: true,
         trim:true,
     },
@@ -19,15 +13,29 @@ const employeeSchema = new mongoose.Schema({
         unique: true,
         trim:true,
     },
-    password:{
+    nin:{
+        type: String,
+        unique: true,
+        required: true,
+        trim:true,
+    },
+    vehicles:{
         type: String,
         required: true,
         trim:true,
     },
-    
-
+    batterytype:{
+        type: String,
+        required: true,
+        trim:true,
+    },
+    bartterynumber:{
+        type: String,
+        required: true,
+        trim:true,
+    },
 });
 
 // signupSchema.plugin(passportLocalMongoose, {usernameField: "email"});
 
-module.exports = mongoose.model("Employee", employeeSchema);
+module.exports = mongoose.model("battery", BatterySchema);

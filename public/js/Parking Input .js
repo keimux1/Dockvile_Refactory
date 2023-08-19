@@ -42,7 +42,7 @@ const isValidphoneNumber = phoneNumber => {
 }
 
 const isValidnin = nin=> {
-    const re = /^[A-Z0-9]{14}$/i;
+    const re = /^[A-Za-z0-9]{14}$/;
     return re.test(nin);
   };
   
@@ -80,7 +80,7 @@ const validateInputs = () => {
 
     if(ninValue === '') {
         setError(nin, 'NIN is required');
-    } else if (!isValidphoneNumber(ninValue)) {
+    } else if (!isValidnin(ninValue)) {
         setError(nin, 'Enter a correct NIN')
     } else {
         setSuccess(nin);

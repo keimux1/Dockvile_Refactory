@@ -9,7 +9,7 @@ router.get("/signUp", (req, res) => {
 });
 
 router.get("/logIn", (req, res) => {
-  res.render("parking");
+  res.render("Dockvile_login");
 });
 
 router.post("/regemployee", async (req, res) => {
@@ -18,7 +18,7 @@ router.post("/regemployee", async (req, res) => {
     const employee = new Employee(req.body);
     await employee.save();
     console.log(req.body);
-    res.redirect("/logIn"); // redirect o the employeeform
+    res.redirect("/api/logIn"); // redirect o the employeeform
   } catch (error) {
     res.status(400).render("signup");
     console.log(error);

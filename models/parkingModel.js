@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
 const parkingSchema = new mongoose.Schema({
-    fullname:{
+    fullName:{
         type: String,
         required: true,
         trim:true,

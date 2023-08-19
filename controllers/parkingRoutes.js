@@ -12,7 +12,7 @@ try {
   const vehicle = new Parking(req.body);
   await vehicle.save();
   console.log(req.body);
-  res.redirect("/logIn"); // redirect o the employeeform
+  res.redirect("/api/logIn"); // redirect o the employeeform
 } catch (error) {
   res.status(400).render("parking");
   console.log(error);
