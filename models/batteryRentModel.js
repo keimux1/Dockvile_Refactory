@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 // const passportLocalMongoose = require("passport-local-mongoose");
 
-const parkingSchema = new mongoose.Schema({
+const BatteryRentSchema = new mongoose.Schema({
     fullName:{
         type: String,
         required: true,
@@ -17,25 +17,17 @@ const parkingSchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
-    numberPlate:{
-        type: String,
-        required: true,
-        trim:true,
-    },
     vehicles:{
         type: String,
         required: true,
         trim:true,
     },
-    vehicles:{
+    batterytype:{
         type: String,
         required: true,
         trim:true,
     },
-    color:{
-        type: String,
-    },
-    parkingSlot:{
+    bartterynumber:{
         type: String,
         required: true,
         trim:true,
@@ -44,4 +36,4 @@ const parkingSchema = new mongoose.Schema({
 
 // signupSchema.plugin(passportLocalMongoose, {usernameField: "email"});
 
-module.exports = mongoose.model("parking", parkingSchema);
+module.exports = mongoose.model("batteryRent", BatteryRentSchema);

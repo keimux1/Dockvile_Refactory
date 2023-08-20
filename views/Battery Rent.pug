@@ -56,7 +56,7 @@ main
     button(type='submit') Battery Rent
   section
     .container
-      form#form(action='#')
+      form#form(name="regbatteryrenter" method="POST" action='/api/regbatteryrenter')
         h4 Battery purchase
         .input-control
           label(for='fullName') Full Name
@@ -82,8 +82,8 @@ main
               option(value='boda') Boda
         .input-control-special
           .input-dropdown
-            label(for='battery-type') Type of Battery:
-            select#battery-type(name='battery-type')
+            label(for='batterytype') Type of Battery:
+            select#batterytype(name='batterytype')
               option(value='truck') Good Year
               option(value='personalCar')
                 | Dunlop
@@ -293,4 +293,4 @@ main
                 p.rem Remaining
             .add-button
               button Add to Chart
-script(src='/js/Battery Input.js')
+//- script(src='/js/Battery Input.js')

@@ -10,12 +10,10 @@ const BatterySchema = new mongoose.Schema({
     phoneNumber:{
         type:String,
         required: true,
-        unique: true,
         trim:true,
     },
     nin:{
         type: String,
-        unique: true,
         required: true,
         trim:true,
     },
