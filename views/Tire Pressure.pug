@@ -57,7 +57,7 @@ main
     button(type='submit') Puncture Fixing
     button(type='submit') Valves
   .container
-    form#form(action='#')
+    form#form(name="tirepressuer" method="POST" action='/api/regtirepressure')
       h4 Tire Pressure
       .input-control
         label(for='fullName') Full Name
@@ -79,8 +79,8 @@ main
             option(value='boda') Boda
       .input-control-special
         .input-dropdown
-          label(for='tire-type') Type of Tire:
-          select#tire-type(name='tire-type')
+          label(for='tiretype') Type of Tire:
+          select#tiretype(name='tiretype')
             option(value='truck') Good Year
             option(value='personalCar')
               | Dunlop
@@ -88,9 +88,9 @@ main
             option(value='coaster') Michelin
       .input-control-special
         .input-dropdown
-          label(for='tire-size') Tire Size:
-          select#tire-size(name='tire-size')
-            option(value='tire-size') 235
+          label(for='tiresize') Tire Size:
+          select#tiresize(name='tiresize')
+            option(value='tiresize') 235
             option(value='')
               | 225
             option(value='') 235
@@ -101,4 +101,4 @@ main
         input#tirenumber(name='tirenumber' type='number')
         .error
       button(type='submit') Enter Purchase
-script(src='/js/Tire Input.js')
+//- script(src='/js/Tire Input.js')

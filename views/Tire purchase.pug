@@ -58,7 +58,7 @@ main
     button(type='submit') Valves
   section
     .container
-      form#form(action='#')
+      form#form(name="batterypurchase" method="POST" action='/api/regtirebuyer')
         h4 Tire purchase
         .input-control
           label(for='fullName') Full Name
@@ -80,8 +80,8 @@ main
               option(value='boda') Boda
         .input-control-special
           .input-dropdown
-            label(for='tire-type') Type of Tire:
-            select#tire-type(name='tire-type')
+            label(for='tiretype') Type of Tire:
+            select#tiretype(name='tiretype')
               option(value='truck') Good Year
               option(value='personalCar')
                 | Dunlop
@@ -89,9 +89,9 @@ main
               option(value='coaster') Michelin
         .input-control-special
           .input-dropdown
-            label(for='tire-size') Tire Size:
-            select#tire-size(name='tire-size')
-              option(value='tire-size') 235
+            label(for='tiresize') Tire Size:
+            select#tiresize(name='tiresize')
+              option(value='tiresize') 235
               option(value='')
                 | 225
               option(value='') 235
@@ -301,4 +301,4 @@ main
                 p.rem Remaining
             .add-button
               button Add to Chart
-script(src='/js/Tire Input.js')
+//- script(src='/js/Tire Input.js')
