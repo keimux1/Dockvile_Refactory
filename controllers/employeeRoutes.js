@@ -25,5 +25,9 @@ router.post("/regemployee", async (req, res) => {
   }
 });
 
+router.get("/dashboard", (req, res) => {
+  res.render("dashBoard");
+});
+
 
 module.exports = router;

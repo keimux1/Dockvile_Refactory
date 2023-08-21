@@ -12,6 +12,7 @@ const parkingRoutes = require("./controllers/parkingRoutes");
 const batteryRoutes = require("./controllers/batteryRoutes");
 const tireRoutes = require("./controllers/tireRoutes");
 const employeeRoutes = require("./controllers/employeeRoutes");
+// const dashboardRoutes = require("./controllers/dashboardRoutes");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -28,6 +29,8 @@ app.use("/api", parkingRoutes);
 app.use("/api", batteryRoutes);
 app.use("/api", tireRoutes);
 app.use("/api", employeeRoutes);
+// app.use("/api", dashboardRoutes);
+
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);
