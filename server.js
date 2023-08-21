@@ -31,6 +31,9 @@ app.use("/api", tireRoutes);
 app.use("/api", employeeRoutes);
 // app.use("/api", dashboardRoutes);
 
+router.get("/dashboard", (req, res) => {
+  res.render("Dashboard");
+});
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);
