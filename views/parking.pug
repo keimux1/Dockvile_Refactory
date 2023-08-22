@@ -13,9 +13,9 @@ head
     document.getElementById("dateIn").value = date;
     }
     function insertTime() {
-    var now = new Time();
-    var time = now.toLocalTimeString();
-    document.getElementById("timeIn").value = time;
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      document.getElementById("timeIn").value = time;
     }
 
 nav.navbar1
@@ -106,7 +106,7 @@ main
           //Date
           input#dateIn(name='dateIn' type='hidden')
          
-        button(onclick='insertDate()' type='submit') Check In
+        button(onclick='insertDate(); insertTime();' type='submit') Check In
         
     .available-parking-section
       .available-parking-slots
