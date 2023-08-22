@@ -6,6 +6,18 @@ head
   link(rel='stylesheet' href='/css/nav.css')
   link(rel='stylesheet' href='/css/header.css')
   link(rel='stylesheet' href='/css/parking.css')
+  script.
+    function insertDate() {
+    var now = new Date();
+    var date = now.toLocaleDateString();
+    document.getElementById("dateIn").value = date;
+    }
+    function insertTime() {
+    var now = new Time();
+    var time = now.toLocalTimeString();
+    document.getElementById("timeIn").value = time;
+    }
+
 nav.navbar1
   .logo
     img(src='/images/Dockvile Logo.png' alt='')
@@ -87,7 +99,14 @@ main
           label(for='parkingSlot') Assign Parking Slot
           input#parkingSlot(name='parkingSlot' type='text')
           .error
-        button(type='submit') Check In
+        .input-control
+          //time in
+          input#timeIn(name='timeIn' type='hidden')
+        .input-control
+          //Date
+          input#dateIn(name='dateIn' type='hidden')
+         
+        button(onclick='insertDate()' type='submit') Check In
         
     .available-parking-section
       .available-parking-slots
@@ -444,4 +463,5 @@ main
                 #boda-progress-bar.veichle-progress-bar(style='width: 0%')
                   // Progress text
                   span 0%
+
 script(src='/js/Parking Input')

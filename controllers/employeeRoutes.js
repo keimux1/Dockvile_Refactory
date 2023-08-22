@@ -25,9 +25,14 @@ router.post("/regemployee", async (req, res) => {
   }
 });
 
-router.get("/dashboard", (req, res) => {
-  res.render("dashBoard");
+
+router.get("/keimux", (req, res) => {
+  res.render("keimux");
 });
+
+// router.get("/dashboard", (req, res) => {
+//   res.render("Dashboard");
+// });
 
 
 module.exports = router;

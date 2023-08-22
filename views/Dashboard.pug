@@ -3,11 +3,13 @@ head
   meta(charset='UTF-8')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   title Dashboard
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9' crossorigin='anonymous')
   link(rel='stylesheet' href='/css/progress1.css')
   script(src='https://cdn.jsdelivr.net/npm/chart.js')
   link(rel='stylesheet' href='/css/nav.css')
   link(rel='stylesheet' href='/css/header.css')
   link(rel='stylesheet' href='/css/parking.css')
+  link(rel='stylesheet' href='/css/dashboard.css')
 nav.navbar1
   .logo
     img(src='/images/Dockvile Logo.png' alt='')
@@ -168,20 +170,33 @@ main
   .table-analytics(style='margin: 24px 24px ')
     h4 Table Register
     br
-    table
+    table.table
       thead
         tr
-          td
-            .table-analytics Employee
-          td
-            .table-analytics
-          td
-            .table-analytics t3
-          td
-            .table-analytics t4
-          td
-      tbody
+          th.col #
+          th.col Attendant
+          th.col Name
+          th.col Number Plate
+          th.col Phone Number
+          th.col NIN Number
+          th.col status
+          th.col Time In
+          th.col Time Out
+      tbody.table-group-divider
         tr
-          td
-            | keith
-//- script(src='/js/progress1.js')
+          th.row 1
+          td Mark
+          td Otto
+          td Ugx 123y
+          td 0776796234
+          td cm5699865468tr
+        tr
+          th.row 2
+          td Jacob
+          td Thornton
+          td @fat
+        tr
+          th.row 3
+          td(colspan='2') Larry the Bird
+          td @twitter
+script(src='/js/progress1.js')

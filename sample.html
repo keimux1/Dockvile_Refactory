@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert Date</title>
+  <script>
+    function insertDate() {
+      var now = new Date();
+      var date = now.toLocaleDateString();
+      document.getElementById("date").value = date;
+    }
+  </script>
+</head>
+<body>
+  <form>
+    <label for="date">Date:</label>
+    <input type="text" id="date" name="date">
+    <button type="button" onclick="insertDate()">Insert Date</button>
+  </form>
+</body>
+</html>
