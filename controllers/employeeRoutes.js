@@ -4,7 +4,7 @@ const router = express.Router();
 // const {ensureLoggedIn} = require("connect-ensure-login");
 
 router.get("/signUp", (req, res) => {
-    console.log("signing ur the employee");
+  console.log("signing ur the employee");
   res.render("signup");
 });
 
@@ -13,7 +13,7 @@ router.get("/logIn", (req, res) => {
 });
 
 router.post("/regemployee", async (req, res) => {
-    console.log("signing ur the employee");
+  console.log("signing ur the employee");
   try {
     const employee = new Employee(req.body);
     await employee.save();
@@ -33,6 +33,5 @@ router.get("/keimux", (req, res) => {
 // router.get("/dashboard", (req, res) => {
 //   res.render("Dashboard");
 // });
-
 
 module.exports = router;

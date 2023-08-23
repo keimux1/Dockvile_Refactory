@@ -27,11 +27,6 @@ const parkingSchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
-    vehicles:{
-        type: String,
-        required: true,
-        trim:true,
-    },
     color:{
         type: String,
     },

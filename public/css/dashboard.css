@@ -1,11 +1,8 @@
-/* .table{
-    border-collapse: collapse;
-}
-
 th{
-    margin-left: 4px !important;
+    background-color: rgb(13, 8, 18);
+    color: #aeacac;
 }
-.col{
+/* .col{
     
     padding-right: 16px;
     padding-top: 8px;
@@ -21,4 +18,4 @@ td{
     font-size: 14px;
     text-align: start;
     height: 8px;
-} */
+} */ */

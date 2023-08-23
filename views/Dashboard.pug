@@ -167,36 +167,258 @@ main
         .graph
           canvas#myChart(width='40' height='40')
           script(src='/js/graph.js')
+  
+  //- Parking table
   .table-analytics(style='margin: 24px 24px ')
-    h4 Table Register
-    br
+    h5 
+        strong Parking Register
+
     table.table
       thead
         tr
-          th.col #
-          th.col Attendant
           th.col Name
           th.col Number Plate
           th.col Phone Number
           th.col NIN Number
-          th.col status
-          th.col Time In
+          th.col Vehicle
+          th.col Color
+          th.col Parking Slot
           th.col Time Out
+          th.col Date In
+          
       tbody.table-group-divider
+        if parkings.length
+          each parking in parkings
+            tr
+              td #{parking.fullName}
+              td #{parking.numberPlate}
+              td #{parking.phoneNumber}
+              td #{parking.nin}
+              td #{parking.vehicles}
+              td #{parking.color}
+              td #{parking.parkingSlot}
+              td #{parking.timeIn}
+              td #{parking.dateIn}
+        else
+          p there are no cars parked
+  br
+  //- Battery table
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Battery table
+
+    table.table
+      thead
         tr
-          th.row 1
-          td Mark
-          td Otto
-          td Ugx 123y
-          td 0776796234
-          td cm5699865468tr
+          th.col Name
+          th.col Phone Number
+          th.col NIN Number
+          th.col Vehicle
+          th.col Battery Type
+          th.col Barttery Number
+          
+      tbody.table-group-divider
+        if Batterys.length
+          each Battery in Batterys
+            tr
+              td #{Battery.fullName}
+              td #{Battery.phoneNumber}
+              td #{Battery.nin}
+              td #{Battery.vehicles}
+              td #{Battery.batterytype}
+              td #{Battery.bartterynumber}
+        else
+          p there are no battery buyers
+  br
+  //- Battery Rent
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Battery Rent table
+
+    table.table
+      thead
         tr
-          th.row 2
-          td Jacob
-          td Thornton
-          td @fat
+          th.col Name
+          th.col Phone Number
+          th.col NIN Number
+          th.col Vehicle
+          th.col Battery Type
+          th.col Barttery Number
+          
+      tbody.table-group-divider
+        if Batteryrents.length
+          each Batteryrent in Batteryrents
+            tr
+              td #{Batteryrent.fullName}
+              td #{Batteryrent.phoneNumber}
+              td #{Batteryrent.nin}
+              td #{Batteryrent.vehicles}
+              td #{Batteryrent.batterytype}
+              td #{Batteryrent.bartterynumber}
+        else
+          p there are no battery buyers
+  br
+  //- Battery Rent
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Battery Rent table
+
+    table.table
+      thead
         tr
-          th.row 3
-          td(colspan='2') Larry the Bird
-          td @twitter
+          th.col Name
+          th.col Phone Number
+          th.col NIN Number
+          th.col Vehicle
+          th.col Battery Type
+          th.col Barttery Number
+          
+      tbody.table-group-divider
+        if Batteryrents.length
+          each Batteryrent in Batteryrents
+            tr
+              td #{Batteryrent.fullName}
+              td #{Batteryrent.phoneNumber}
+              td #{Batteryrent.nin}
+              td #{Batteryrent.vehicles}
+              td #{Batteryrent.batterytype}
+              td #{Batteryrent.bartterynumber}
+        else
+          p there are no battery buyers
+  br
+  //- Tire Information
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Tire Purchase table
+
+    table.table
+      thead
+        tr
+          th.col Name
+          th.col Phone Number
+          th.col Vehicle
+          th.col Tire Type
+          th.col Tire Size
+          th.col Tire Number
+          
+      tbody.table-group-divider
+        if Tires.length
+          each Tire in Tires
+            tr
+              td #{Tire.fullName}
+              td #{Tire.phoneNumber}
+              td #{Tire.vehicles}
+              td #{Tire.tiretype}
+              td #{Tire.tiresize}
+              td #{Tire.tirenumber}
+        else
+          p there are no battery buyers
+  br
+  //- TirePressure
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Tire Pressure table
+
+    table.table
+      thead
+        tr
+          th.col Name
+          th.col Phone Number
+          th.col Vehicle
+          th.col Tire Type
+          th.col Tire Size
+          th.col Tire Number
+          
+      tbody.table-group-divider
+        if TirePressures.length
+          each TirePressure in TirePressures
+            tr
+              td #{TirePressure.fullName}
+              td #{TirePressure.phoneNumber}
+              td #{TirePressure.vehicles}
+              td #{TirePressure.tiretype}
+              td #{TirePressure.tiresize}
+              td #{TirePressure.tirenumber}
+        else
+          p there are no pressure purchase
+  br
+  //- TirePuncture
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Tire Puncture table
+
+    table.table
+      thead
+        tr
+          th.col Name
+          th.col Phone Number
+          th.col Vehicle
+          th.col Tire Type
+          th.col Tire Size
+          th.col Tire Number
+          
+      tbody.table-group-divider
+        if TirePunctures.length
+          each TirePuncture in TirePunctures
+            tr
+              td #{TirePuncture.fullName}
+              td #{TirePuncture.phoneNumber}
+              td #{TirePuncture.vehicles}
+              td #{TirePuncture.tiretype}
+              td #{TirePuncture.tiresize}
+              td #{TirePunctures.tirenumber}
+        else
+          p there are no pressure purchase
+  br
+  //- TireValves
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+        strong Tire Valves table
+
+    table.table
+      thead
+        tr
+          th.col Name
+          th.col Phone Number
+          th.col Vehicle
+          th.col Tire Type
+          th.col Tire Size
+          th.col Tire Number
+          
+      tbody.table-group-divider
+        if TireValves.length
+          each TireValve in TireValves
+            tr
+              td #{TireValve.fullName}
+              td #{TireValve.phoneNumber}
+              td #{TireValve.vehicles}
+              td #{TireValve.tiretype}
+              td #{TireValve.tiresize}
+              td #{TireValve.tirenumber}
+        else
+          p there are no tire valve buyers
+  
+  br
+  //- employees table
+  .table-analytics(style='margin: 24px 24px ')
+    h5 
+      strong Employees
+
+    table.table
+      thead
+        tr
+          th.col Name
+          th.col Email
+          th.col Phone Number
+
+      tbody.table-group-divider
+      if employees.length
+        each employee in employees
+          tr
+            td #{employee.fullName}
+            td #{employee.email}
+            td #{employee.phoneNumber} 
+      else
+        p there are no employees in the database
+
 script(src='/js/progress1.js')

@@ -5,11 +5,9 @@ const phoneNumber = document.getElementById("phoneNumber");
 const password = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
-  console.log("waiting for the event listener");
-  e.preventDefault();
-  console.log("validating inputs");
-  validateInputs();
-  console.log("validation successful");
+  if (!validateInputs()) {
+    e.preventDefault();
+  }
 });
 
 const setError = (element, message) => {
@@ -88,7 +86,5 @@ const validateInputs = () => {
   } else {
     setSuccess(password);
   }
-
-  
 
 };
