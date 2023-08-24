@@ -1,6 +1,6 @@
-th{
-    background-color: rgb(13, 8, 18);
-    color: #aeacac;
+.thead-dark{
+    background-color: rgb(13, 8, 18) !important;
+    color: #aeacac !important;
 }
 /* .col{
     
@@ -18,4 +18,4 @@ td{
     font-size: 14px;
     text-align: start;
     height: 8px;
-} */ */
+} */ 

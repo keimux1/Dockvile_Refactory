@@ -1,15 +1,16 @@
-
 const form = document.getElementById("form");
 const fullName = document.getElementById("fullName");
 const phoneNumber = document.getElementById("phoneNumber");
 const nin = document.getElementById("nin");
+const numberPlate = document.getElementById("numberPlate");
 const vehicles = document.getElementById("vehicles");
-const bartterynumber = document.getElementById("bartterynumber");
+const color = document.getElementById("color");
+const parkingSlot = document.getElementById("parkingSlot");
 
-// form.addEventListener("submit", (e) => {
-//   e.preventDefault();
+// form.addEventListener('submit', e => {
+//     e.preventDefault();
 
-//   validateInputs();
+//     validateInputs();
 // });
 
 form.addEventListener("submit", (e) => {
@@ -50,13 +51,29 @@ const isValidphoneNumber = (phoneNumber) => {
   return re.test(phoneNumber);
 };
 
+// const isValidnin = nin=> {
+//     const re = /^[A-Za-z0-9]{14}$/;
+//     return re.test(nin);
+//   };
+
+const isValidnin = (nin) => {
+  const re = /^[A-Za-z0-9]{14}$/;
+  return re.test(nin);
+};
+
+const isValidNumberPlate = (numberPlate) => {
+  const re = /^U[A-Z0-9]{2}\s[A-Z0-9]{3}\s[A-Z0-9]{2}$/i;
+  return re.test(numberPlate);
+};
 
 const validateInputs = () => {
   const fullNameValue = fullName.value.trim();
   const phoneNumberValue = phoneNumber.value.trim();
   const ninValue = nin.value.trim();
-  const bartterynumbervalue = bartterynumber.value.trim();
+  const numberPlateValue = numberPlate.value.trim();
   const vehiclesValue = vehicles.value.trim();
+  const colorValue = color.value.trim();
+  const parkingSlotValue = parkingSlot.value.trim();
   let error = 0;
 
   if (fullNameValue === "") {
@@ -80,27 +97,30 @@ const validateInputs = () => {
   }
 
   if (ninValue === "") {
-    setError(nin, "nin is required");
+    setError(nin, "NIN is required");
     error++;
-  } else if (ninValue.length < 15) {
-    setError(nin, "Enter a correct nin.");
+  } else if (!isValidnin(ninValue)) {
+    setError(nin, "Enter a correct NIN");
     error++;
   } else {
     setSuccess(nin);
   }
 
-  if (vehiclesValue === "") {
-    setError(vehicles, "Enter a NumberPlate");
+  if (numberPlateValue === "") {
+    setError(numberPlate, "Enter a NumberPlate");
+    error++;
+  } else if (!isValidNumberPlate(numberPlateValue)) {
+    setError(numberPlate, "start with a u and must be 7 characters");
     error++;
   } else {
-    setSuccess(vehicles);
+    setSuccess(numberPlate);
   }
 
-  if (bartterynumbervalue === "") {
-    setError(bartterynumber, "Enter a Number of Bartteis");
+  if (parkingSlotValue === "") {
+    setError(numberPlate, "Assaign a parking slot");
     error++;
   } else {
-    setSuccess(bartterynumber);
+    setSuccess(numberPlate);
   }
 
   return error;
