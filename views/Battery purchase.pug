@@ -95,202 +95,29 @@ main
           .error
         button(type='submit') Enter Purchase
     .product-grid
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
-      .card
-        .product-img
-          img.brand-pic(src='/images/battery.png' alt='yire')
-        .card-des
-          .product-name
-            p.brand Dunlop
-          .product-description
-            p.description
-              | tubless,20 inch,all wether,225mm wide,...
-              // Aspect Ratios – P225,Speed Rating –P225
-          .product-price
-            p.price 100,000
-          .card-inter
-            .card-rem
-              .card-rem-progress
-                .prog-out
-                  .prog-In
-              .card-rem-text
-                p.rem-no 30
-                p.rem Remaining
-            .add-button
-              button Add to Chart
+    if batteries .length 
+      console.log(batteries)
+      each batter in batteries 
+        .card
+          .product-img
+            //- img.brand-pic(src='/images/battery.png' alt='yire')
+          .card-des
+            .product-name
+              p.brand #{batter.fullName} 
+            .product-description
+              p.description
+                | tubless,20 inch,all wether,225mm wide,...
+                // Aspect Ratios – P225,Speed Rating –P225
+            .product-price
+              p.price 100,000
+            .card-inter
+              .card-rem
+                .card-rem-progress
+                  .prog-out
+                    .prog-In
+                .card-rem-text
+                  p.rem-no 30
+                  p.rem Remaining
+              .add-button
+                button#addToChart Add to Chart
 script(src='/js/Battery Input.js')

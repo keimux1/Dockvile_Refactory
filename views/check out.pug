@@ -1,0 +1,112 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Parking
+  link(rel='stylesheet' href='/css/nav.css')
+  link(rel='stylesheet' href='/css/header.css')
+  link(rel='stylesheet' href='/css/parking.css')
+  link(rel='stylesheet' href='/css/checkout.css')
+nav.navbar1
+  .logo
+    img(src='/images/Dockvile Logo.png' alt='')
+  .nav-items
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/Parking icon.svg' alt='')
+          p Parking
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/tire icon.svg' alt='')
+          p Tire
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/battery icon.svg' alt='')
+          p Battery
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/dash board icon.svg' alt='')
+          p Dashboard
+    ul
+      li
+        a(href='')
+          .silent-space
+            span t
+          img(src='/images/simple-line-icons_logout.svg' alt='')
+          p LogOut
+main
+  div
+    .header
+      .left-section Parking
+      .right-section
+        img.Notification(src='/images/Header-Notification.svg' alt='')
+        img.shopping(src='/images/Header-Shopping chart.svg' alt='')
+        img.img(src='/images/Header-img.png' alt='profile-pic')
+  section
+    .checkout-section
+      h3 Selected items
+      .checkout-items
+        .checkout-item-img
+          img(src='/images/battery.png' alt='')
+        .checkout-item-description-section
+          h5 Battery
+          div
+            .checkout-item-description
+              p
+                | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero fugiat quaerat, molestiae.
+          button
+            img(src='/images/material-symbols_delete-outline.svg' alt='')
+            div REMOVE ITEM
+        .item-class-section
+          .item-price
+            h3 150000
+          .item-quantity
+            button +
+            .cart-item-number 2
+            button &minus;
+    .checkout-left-section
+      .payment-section
+        h3 check Out
+        table
+          tr
+            th
+              h5 Items
+            th
+              h5 Price
+          tr
+            td Apple
+            td $1
+          tr
+            td Banana
+            td $0.5
+          tr
+            th
+              h5 Total
+            th
+              h5 Price
+      .payment-method-section
+        h4 Payment Method
+        div
+          .cash-div
+            input#cash(type='radio' name='payment' value='cash')
+            label(for='cash') cash
+          .mobile-div
+            input#Mobile-Money(type='radio' name='payment' value='Mobile-Money')
+            label(for='Mobile-Money') Mobile Money
+            br
+            form#form(action='#' style='max-width: 250px;')
+              .input-control(style='width: 200px;')
+                label(for='phoneNumber') Phone Number
+                input#phoneNumber(name='phoneNumber' type='text')
+                .error
+              button(type='submit') Initiate
+script(src='/js/checkout.js')

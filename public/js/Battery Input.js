@@ -50,6 +50,10 @@ const isValidphoneNumber = (phoneNumber) => {
   return re.test(phoneNumber);
 };
 
+const isValidnin = (nin) => {
+  const re = /^[A-Za-z0-9]{14}$/;
+  return re.test(nin);
+};
 
 const validateInputs = () => {
   const fullNameValue = fullName.value.trim();
@@ -82,8 +86,8 @@ const validateInputs = () => {
   if (ninValue === "") {
     setError(nin, "nin is required");
     error++;
-  } else if (ninValue.length < 15) {
-    setError(nin, "Enter a correct nin.");
+  } else if (!isValidnin(ninValue)) {
+    setError(nin, "Enter a correct NIN");
     error++;
   } else {
     setSuccess(nin);
@@ -105,3 +109,7 @@ const validateInputs = () => {
 
   return error;
 };
+
+const addToCart = function(){
+  
+}

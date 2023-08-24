@@ -14,6 +14,7 @@ const batteryRoutes = require("./controllers/batteryRoutes");
 const tireRoutes = require("./controllers/tireRoutes");
 const employeeRoutes = require("./controllers/employeeRoutes");
 const dashboardRoutes = require("./controllers/dashboardRoutes");
+const checkOuRoutes = require("./controllers/checkOutRoutes");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -31,6 +32,7 @@ app.use("/api", parkingRoutes);
 app.use("/api", batteryRoutes);
 app.use("/api", tireRoutes);
 app.use("/api", employeeRoutes);
+app.use("/api", checkOuRoutes);
 
 
 app.listen(port, () => {

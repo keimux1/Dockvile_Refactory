@@ -4,8 +4,10 @@ const Batteryrent = require("../models/batteryRentModel");
 const router = express.Router();
 // const {ensureLoggedIn} = require("connect-ensure-login");
 
-router.get("/batterypurchase", (req, res) => {
-  res.render("Battery purchase");
+router.get("/batterypurchase", async(req, res) => {
+  const battery = await Battery.find()
+  console.log(battery);
+  res.render("Battery purchase", {batteries: battery});
 });
 
 router.post("/regbatterybuyer", async (req, res) => {
