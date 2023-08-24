@@ -5,7 +5,11 @@ const phoneNumber = document.getElementById("phoneNumber");
 const password = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
-  if (!validateInputs()) {
+  let valid = validateInputs(); 
+
+  console.log("Valid inputs", valid);
+
+  if ( valid > 0 ) {
     e.preventDefault();
   }
 });
@@ -54,37 +58,46 @@ const validateInputs = () => {
   const phoneNumberValue = phoneNumber.value.trim();
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
+  let error = 0;
 
   if (fullNameValue === "") {
     setError(fullName, "Enter valid name");
+    error++;
   } else if (!isValidfullName(fullNameValue)) {
     setError(fullName, "Begin with Capital letter and No Numbers");
+    error++;
   } else {
     setSuccess(fullName);
   }
 
   if (phoneNumberValue === "") {
     setError(phoneNumber, "Enter valid phone number");
+    error++;
   } else if (!isValidphoneNumber(phoneNumberValue)) {
     setError(phoneNumber, "Provide a valid phone number");
+    error++;
   } else {
     setSuccess(phoneNumber);
   }
 
   if (emailValue === "") {
     setError(email, "Enter valid Email Address");
+    error++;
   } else if (!isValidemail(emailValue)) {
     setError(email, "Provide a valid Email Address");
+    error++;
   } else {
     setSuccess(email);
   }
 
   if (passwordValue === "") {
     setError(password, "password require");
+    error++;
   } else if (!isValidpassword(passwordValue)) {
     setError(password, "password must not be less than 8 characters");
+    error++;
   } else {
     setSuccess(password);
   }
-
+  return error;
 };
