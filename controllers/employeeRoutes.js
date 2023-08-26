@@ -25,13 +25,14 @@ router.post("/regemployee", async (req, res) => {
   }
 });
 
-
-router.get("/keimux", (req, res) => {
-  res.render("keimux");
+//delete employees
+router.post("/employee/delete", async (req, res) => {
+  try{
+    await Employee.deleteOne({_id:req.body.id});
+    res.redirect("back");
+  }catch{
+    res.status(400).send("sorry could not delete table from the database");
+  }
 });
-
-// router.get("/dashboard", (req, res) => {
-//   res.render("Dashboard");
-// });
 
 module.exports = router;

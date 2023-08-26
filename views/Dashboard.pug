@@ -410,6 +410,7 @@ main
           th.col Name
           th.col Email
           th.col Phone Number
+          th.col Delete
 
       tbody.table-group-divider
       if employees.length
@@ -417,7 +418,12 @@ main
           tr
             td #{employee.fullName}
             td #{employee.email}
-            td #{employee.phoneNumber} 
+            td #{employee.phoneNumber}
+            td 
+              form(action="/api/employee/delete" method="POST")
+                input(type="hidden" name="id" value=employee._id)
+                button.btn.btn-danger(Type="submit") Delete 
+
       else
         p there are no employees in the database
 

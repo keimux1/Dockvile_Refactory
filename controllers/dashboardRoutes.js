@@ -41,4 +41,11 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
+
+
+//update
+router.get("/dashboard", (req, res) => {
+  res.render("dashboard");
+});
+
 module.exports = router;
