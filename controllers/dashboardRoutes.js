@@ -11,9 +11,9 @@ const router = express.Router();
 // const {ensureLoggedIn} = require("connect-ensure-login");
 
 
-// router.get("/dashboard", (req, res) => {
-//   res.render("dashboard");
-// });
+router.get("/editparking", (req, res) => {
+  res.render("editparking");
+});
 
 router.get("/dashboard", async (req, res) => {
   try {
@@ -44,8 +44,14 @@ router.get("/dashboard", async (req, res) => {
 
 
 //update
-router.get("/dashboard", (req, res) => {
-  res.render("dashboard");
+router.get("/dashboard/edit/:id", async(req, res) => {
+  try {
+    const park = await Parking.findOne({_id: req.params.id });
+    res.render("editparking",{parking: park});
+  }catch(error) {
+    res.status(404).send("Sorry couldnot edit table");
+    console.log(error);
+  }
 });
 
 module.exports = router;

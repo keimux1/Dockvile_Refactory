@@ -11,12 +11,12 @@ head
     function insertDate() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateIn").value = date.toString();
+    document.getElementById("dateOut").value = date.toString();
     }
     function insertTime() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeIn").value = time.toString();
+      document.getElementById("timeOut").value = time.toString();
     }
 
 nav.navbar1
@@ -65,28 +65,28 @@ main
         img.img(src='/images/Header-img.png' alt='profile-pic')
   section
     .container
-      form#form(name="parkingform" method="POST" action='/api/regparking')
+      form#form(name="parkingform" method="POST" action='/api/dashboard/edit?id=' +parking._id)
         h1 Registration
         .input-control
           label(for='fullName') Full Name
-          input#fullName(name='fullName' type='text')
+          input#fullName(name='fullName' value=parking.fullName type='text')
           .error
         .input-control
           label(for='phoneNumber') Phone Number
-          input#phoneNumber(name='phoneNumber' type='text')
+          input#phoneNumber(name='phoneNumber' value=parking.phoneNumber type='text')
           .error
         .input-control
           label(for='nin') NIN
-          input#nin(name='nin' type='text')
+          input#nin(name='nin' value=parking.nin type='text')
           .error
         .input-control
           label(for='numberPlate') Number Plate
-          input#numberPlate(name='numberPlate' type='text')
+          input#numberPlate(name='numberPlate' value=parking.numberPlate type='text')
           .error
         .input-control-special
           .input-dropdown
             label(for='vehicles') Choose a vehicle:
-            select#vehicles(name='vehicles')
+            select#vehicles(name='vehicles' value=parking.vehicles)
               option(value='truck') Truck
               option(value='personalCar')
                 | Personal Car(below 5 seats)
@@ -95,25 +95,25 @@ main
               option(value='boda') Boda
           .input-color
             label(for='color') Color:
-            input#color(type='color' name='color')
+            input#color(type='color' value=parking.color name='color')
         .input-control
           label(for='parkingSlot') Assign Parking Slot
-          input#parkingSlot(name='parkingSlot' type='text')
+          input#parkingSlot(name='parkingSlot' value=parking.parkingSlot type='text')
           .error
         .input-control
           //time in
-          input#timeIn(name='timeIn' type='hidden')
+          input#timeIn(name='timeIn' value=parking.timeIn type='text')
         .input-control
-          //Date
-          input#dateIn(name='dateIn' type='hidden')
+          //Date in
+          input#dateIn(name='dateIn' value=parking.dateIn type='text')
         .input-control
-          //time out
-          input#timeOut(name='timeIn' type='hidden')
+          //time Out
+          input#timeOut(name='timeOut' type='hidden')
         .input-control
           //Date Out
-          input#dateOut(name='dateIn' type='hidden')
+          input#dateOut(name='dateOut' type='hidden')
 
-        button(onclick='insertDate(); insertTime();' type='submit') Check In
+        button(onclick='insertDate(); insertTime();' type='submit') Check Out
 
     .available-parking-section
       .available-parking-slots
@@ -486,10 +486,10 @@ main
 //-   //     validateInputs();
 //-   // });
 //-   form.addEventListener("submit", (e) => {
-//-     let valid = validateInputs();
-//-     console.log("Valid inputs", valid);
-//-     if (valid > 0) {
-//-     e.preventDefault();
+//-   let valid = validateInputs();
+//-   console.log("Valid inputs", valid);
+//-   if (valid > 0) {
+//-   e.preventDefault();
 //-   }
 //-   });
 //-   const setError = (element, message) => {

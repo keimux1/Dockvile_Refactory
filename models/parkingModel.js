@@ -45,6 +45,14 @@ const parkingSchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
+    timeOut:{
+        type: String,
+        trim:true,
+    },
+    dateOut:{
+        type: String,
+        trim:true,
+    },
 });
 
 // signupSchema.plugin(passportLocalMongoose, {usernameField: "email"});

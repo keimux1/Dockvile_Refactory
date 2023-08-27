@@ -10,6 +10,18 @@ head
   link(rel='stylesheet' href='/css/header.css')
   link(rel='stylesheet' href='/css/parking.css')
   link(rel='stylesheet' href='/css/dashboard.css')
+
+  script.
+    function insertDate() {
+    var now = new Date();
+    var date = now.toLocaleDateString();
+    document.getElementById("dateOut").value = date;
+    }
+    function insertTime() {
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      document.getElementById("timeOut").value = time;
+    }
 nav.navbar1
   .logo
     img(src='/images/Dockvile Logo.png' alt='')
@@ -183,9 +195,12 @@ main
           th.col Vehicle
           th.col Color
           th.col Parking Slot
-          th.col Time Out
+          th.col Time In
           th.col Date In
-          
+          th.col Time Out
+          th.col Date Out
+          th.col Check Out
+
       tbody.table-group-divider
         if parkings.length
           each parking in parkings
@@ -199,6 +214,11 @@ main
               td #{parking.parkingSlot}
               td #{parking.timeIn}
               td #{parking.dateIn}
+              td #{parking.timeOut}
+              td #{parking.dateOut}
+              td 
+               a.btn.btn-warning(href="/api/dashboard/edit/"+parking._id) checkOut
+
         else
           p there are no cars parked
   br
@@ -227,34 +247,6 @@ main
               td #{Battery.vehicles}
               td #{Battery.batterytype}
               td #{Battery.bartterynumber}
-        else
-          p there are no battery buyers
-  br
-  //- Battery Rent
-  .table-analytics(style='margin: 24px 24px ')
-    h5 
-        strong Battery Rent table
-
-    table.table
-      thead
-        tr
-          th.col Name
-          th.col Phone Number
-          th.col NIN Number
-          th.col Vehicle
-          th.col Battery Type
-          th.col Barttery Number
-          
-      tbody.table-group-divider
-        if Batteryrents.length
-          each Batteryrent in Batteryrents
-            tr
-              td #{Batteryrent.fullName}
-              td #{Batteryrent.phoneNumber}
-              td #{Batteryrent.nin}
-              td #{Batteryrent.vehicles}
-              td #{Batteryrent.batterytype}
-              td #{Batteryrent.bartterynumber}
         else
           p there are no battery buyers
   br
