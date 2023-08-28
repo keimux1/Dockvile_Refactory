@@ -11,12 +11,12 @@ head
     function insertDate() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateIn").value = date;
+    document.getElementById("dateIn").value = date.toString();
     }
     function insertTime() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeIn").value = time;
+      document.getElementById("timeIn").value = time.toString();
     }
 
 nav.navbar1
