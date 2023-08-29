@@ -22,7 +22,8 @@ try {
 router.get("/employee/edit/:id", async (req, res) => {
   try{
      const emp = await Employee.findOne({_id:req.params.id});
-    res.redirect("back");
+     console.log(req.body)
+      res.redirect("back");
   }catch{
     res.status(400).send("sorry could not find table from the database");
   }

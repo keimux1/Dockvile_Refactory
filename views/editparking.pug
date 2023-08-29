@@ -8,15 +8,15 @@ head
   link(rel='stylesheet' href='/css/parking.css')
 
   script.
-    function insertDate() {
+    function insertDateOut() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateOut").value = date.toString();
+    document.getElementById("dateOut").value = date;
     }
-    function insertTime() {
+    function insertTimeOut() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeOut").value = time.toString();
+      document.getElementById("timeOut").value = time;
     }
 
 nav.navbar1
@@ -87,12 +87,12 @@ main
           .input-dropdown
             label(for='vehicles') Choose a vehicle:
             select#vehicles(name='vehicles' value=parking.vehicles)
-              option(value='truck') Truck
-              option(value='personalCar')
-                | Personal Car(below 5 seats)
-              option(value='taxi') Taxi(below 5 seats)
-              option(value='coaster') Coaster(above 14 seats)
-              option(value='boda') Boda
+              option(value='truck' selected=parking.vehicles=== 'truck' ) Truck
+              option(value='personalCar' selected=parking.vehicles=== 'personalCar')
+                | Personal Car(below 5 seats )
+              option(value='taxi' selected=parking.vehicles=== 'taxi') Taxi(below 5 seats)
+              option(value='coaster' selected=parking.vehicles=== 'coaster') Coaster(above 14 seats)
+              option(value='boda' selected=parking.vehicles=== 'boda') Boda
           .input-color
             label(for='color') Color:
             input#color(type='color' value=parking.color name='color')
@@ -102,9 +102,11 @@ main
           .error
         .input-control
           //time in
+          label(for='timeIn') Time In
           input#timeIn(name='timeIn' value=parking.timeIn type='text')
         .input-control
           //Date in
+          label(for='dateIn') Date In
           input#dateIn(name='dateIn' value=parking.dateIn type='text')
         .input-control
           //time Out
@@ -113,7 +115,7 @@ main
           //Date Out
           input#dateOut(name='dateOut' type='hidden')
 
-        button(onclick='insertDate(); insertTime();' type='submit') Check Out
+        button(onclick='insertDateOut(); insertTimeOut();' type='submit') Check Out
 
     .available-parking-section
       .available-parking-slots

@@ -54,4 +54,17 @@ router.get("/dashboard/edit/:id", async(req, res) => {
   }
 });
 
+router.post('/dashboard/edit', async (req, res) => {
+  try{
+      await Parking.findOneAndUpdate({_id: req.query.id},req.body);
+      console.log(req.body);
+      res.redirect('/api/dashboard')
+
+  }catch(error){
+      res.status(400).send('Could not edit data') 
+      console.log(error)
+
+  }
+})
+
 module.exports = router;
