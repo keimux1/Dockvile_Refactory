@@ -19,6 +19,18 @@ try {
 }
 });
 
+
+router.get("/dashboard1" , async(req, res)=>{
+  try {
+    const parkingCounts = await Parking.countDocuments();
+    req.session.parkingCounts = parkingCounts;
+    
+    res.render("dashboard", {parkingCounts});
+  } catch (error) {
+    return res.status(400).send({message:"couldn't get data"})
+  }
+})
+
 router.get("/employee/edit/:id", async (req, res) => {
   try{
      const emp = await Employee.findOne({_id:req.params.id});

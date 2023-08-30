@@ -11,12 +11,12 @@ head
     function insertDateOut() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateOut").value = date;
+    document.getElementById("dateOut").value = date.toString();
     }
     function insertTimeOut() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeOut").value = time;
+      document.getElementById("timeOut").value = time.toString();
     }
 
 nav.navbar1
@@ -25,32 +25,32 @@ nav.navbar1
   .nav-items
     ul
       li
-        a(href='')
+        a(href='/api/parking')
           .silent-space
             span t
           img(src='/images/Parking icon.svg' alt='')
           p Parking
       li
-        a(href='')
+        a(href='/api/tirepurchase')
           .silent-space
             span t
           img(src='/images/tire icon.svg' alt='')
           p Tire
       li
-        a(href='')
+        a(href='/api/batterypurchase')
           .silent-space
             span t
           img(src='/images/battery icon.svg' alt='')
           p Battery
       li
-        a(href='')
+        a(href='/api/dashboard')
           .silent-space
             span t
           img(src='/images/dash board icon.svg' alt='')
           p Dashboard
     ul
       li
-        a(href='')
+        a(href='/api/logIn')
           .silent-space
             span t
           img(src='/images/simple-line-icons_logout.svg' alt='')
