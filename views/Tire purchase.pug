@@ -53,10 +53,14 @@ main
         img.shopping(src='/images/Header-Shopping chart.svg' alt='')
         img.img(src='/images/Header-img.png' alt='profile-pic')
   .button-section
-    button(type='submit') Tire Purchase
-    button(type='submit') Tire Pressure
-    button(type='submit') Puncture Fixing
-    button(type='submit') Valves
+    a(href="/api/tirepurchase") 
+      button(type='submit') Tire Purchase
+    a(href="/api/tirepressure") 
+      button(type='submit') Tire Pressure
+    a(href="/api/puncturefixing") 
+      button(type='submit' ) Puncture Fixing
+    a(href="/api/tirevalves") 
+      button(type='submit') Valves
   section
     .container
       form#form(name="batterypurchase" method="POST" action='/api/regtirebuyer')

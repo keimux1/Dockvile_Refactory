@@ -11,12 +11,12 @@ head
     function insertDate() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateIn").value = date.toString();
+    document.getElementById("dateIn").value = String(date);
     }
     function insertTime() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeIn").value = time.toString();
+      document.getElementById("timeIn").value = String(time);
     }
 
 nav.navbar1
@@ -96,13 +96,32 @@ main
           .input-color
             label(for='color') Color:
             input#color(type='color' name='color')
+        .input-control-special
+          .input-dropdown
+            label(for='parkingPrice') Parking Time
+            select#parkingPrice(name='parkingPrice')
+              option(disabled="disabled") 
+              option( style="background-color: rgb(12, 100, 100)" disabled="disabled") Coster
+              option(value='4000' style="background-color: rgb(40, 166, 166)") Coster Day
+              option(value='2000' style="background-color: rgb(40, 166, 166)") Coster Night
+              option(value='3000' style="background-color: rgb(40, 166, 166)") Coster less than 3 hours
+              option(disabled="disabled") 
+              option(style="background-color: rgb(18, 78, 38)" disabled="disabled") Taxi,PersonalCar,Truck
+              option(value='3000' style="background-color: rgb(50, 168, 89)") Day parking
+              option(value='2000' style="background-color: rgb(50, 168, 89)") Night Parking
+              option(value='2000' style="background-color: rgb(50, 168, 89)") less than 3 hours
+              option(disabled="disabled") 
+              option(style="background-color: rgb(22, 69, 79)" disabled="disabled") Boda
+              option(value='2000' style="background-color: rgb(63, 180, 207)") Boda Day
+              option(value='2000' style="background-color: rgb(63, 180, 207)") Boda Night
+              option(value='1000' style="background-color: rgb(63, 180, 207)") Boda less than 3 hours
         .input-control
           label(for='parkingSlot') Assign Parking Slot
           input#parkingSlot(name='parkingSlot' type='text')
           .error
         .input-control
           //time in
-          input#timeIn(name='timeIn' type='hidden')
+          input#timeIn(name='timeIn' type='hidden' )
         .input-control
           //Date in
           input#dateIn(name='dateIn' type='hidden')
@@ -523,7 +542,7 @@ script.
   };
 
   const isValidNumberPlate = (numberPlate) => {
-  const re = /^UG[XxYy] ?\d{3}[A-Za-z]$/;
+  const re = /^U[A-Z]{2}\s?\d{3}[A-Z]$/i;
   return re.test(numberPlate);
   };
 
@@ -560,7 +579,7 @@ script.
   } else if (!isValidnin(ninValue)) {
   setError(nin, "Enter a correct NIN");
   error++;
-  } else {
+  } else{
   setSuccess(nin);
   }
   if (numberPlateValue === "") {

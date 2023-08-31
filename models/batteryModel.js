@@ -32,6 +32,11 @@ const BatterySchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
+    bartteryprice:{
+        type: String,
+        required: true,
+        trim:true,
+    },
 });
 
 // signupSchema.plugin(passportLocalMongoose, {usernameField: "email"});

@@ -93,9 +93,29 @@ main
               option(value='taxi' selected=parking.vehicles=== 'taxi') Taxi(below 5 seats)
               option(value='coaster' selected=parking.vehicles=== 'coaster') Coaster(above 14 seats)
               option(value='boda' selected=parking.vehicles=== 'boda') Boda
-          .input-color
+        .input-color
             label(for='color') Color:
             input#color(type='color' value=parking.color name='color')
+        .input-control-special
+          .input-dropdown
+            label(for='parkingPrice' value=parking.parkingPrice) Parking Time
+            select#parkingPrice(name='parkingPrice')
+              option(disabled="disabled") 
+              option( style="background-color: rgb(12, 100, 100)" disabled="disabled") Coster
+              option(value='4000' selected=parking.parkingPrice=== '4000' style="background-color: rgb(40, 166, 166)") Coster Day
+              option(value='2000' selected=parking.parkingPrice=== '2000' style="background-color: rgb(40, 166, 166)") Coster Night
+              option(value='3000' selected=parking.parkingPrice=== '2000' style="background-color: rgb(40, 166, 166)") Coster less than 3 hours
+              option(disabled="disabled") 
+              option(style="background-color: rgb(18, 78, 38)" disabled="disabled") Taxi,PersonalCar,Truck
+              option(value='3000' selected=parking.parkingPrice=== '3000' style="background-color: rgb(50, 168, 89)") Day parking
+              option(value='2000' selected=parking.parkingPrice=== '2000' style="background-color: rgb(50, 168, 89)") Night Parking
+              option(value='2000' selected=parking.parkingPrice=== '2000' style="background-color: rgb(50, 168, 89)") less than 3 hours
+              option(disabled="disabled") 
+              option(style="background-color: rgb(22, 69, 79)" disabled="disabled") Boda
+              option(value='2000' selected=parking.parkingPrice=== '4000' style="background-color: rgb(63, 180, 207)") Boda Day
+              option(value='2000' selected=parking.parkingPrice=== '2000' style="background-color: rgb(63, 180, 207)") Boda Night
+              option(value='1000' selected=parking.parkingPrice=== '1000' style="background-color: rgb(63, 180, 207)") Boda less than 3 hours
+        
         .input-control
           label(for='parkingSlot') Assign Parking Slot
           input#parkingSlot(name='parkingSlot' value=parking.parkingSlot type='text')

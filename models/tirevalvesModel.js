@@ -22,7 +22,13 @@ const TirevalveSchema = new mongoose.Schema({
         required: true,
         trim:true,
     },
+    valveprice:{
+        type: String,
+        required: true,
+        trim:true,
+    },
 });
+
 
 // signupSchema.plugin(passportLocalMongoose, {usernameField: "email"});
 

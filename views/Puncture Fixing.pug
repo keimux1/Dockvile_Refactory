@@ -53,10 +53,14 @@ main
         img.shopping(src='/images/Header-Shopping chart.svg' alt='')
         img.img(src='/images/Header-img.png' alt='profile-pic')
   .button-section
-    button(type='submit') Tire Purchase
-    button(type='submit') Tire Pressure
-    button(type='submit') Puncture Fixing
-    button(type='submit') Valves
+    a(href="/api/tirepurchase") 
+      button(type='submit') Tire Purchase
+    a(href="/api/tirepressure") 
+      button(type='submit') Tire Pressure
+    a(href="/api/puncturefixing") 
+      button(type='submit' ) Puncture Fixing
+    a(href="/api/tirevalves") 
+      button(type='submit') Valves
   .container
     form#form(name="regpunctureFixing" method="POST" action='/api/regpunctureFixing')
       h4 Puncture Fixing
@@ -82,24 +86,24 @@ main
         .input-dropdown
           label(for='tiretype') Type of Tire:
           select#tiretype(name='tiretype')
-            option(value='truck') Good Year
-            option(value='personalCar')
-              | Dunlop
-            option(value='taxi') Toyo Tire
-            option(value='coaster') Michelin
+            option(value='Good Year') Good Year
+            option(value='Dunlop') Dunlop
+            option(value='Toyo Tire') Toyo Tire
+            option(value='Michelin') Michelin
       .input-control-special
         .input-dropdown
           label(for='tiresize') Tire Size:
           select#tiresize(name='tiresize')
-            option(value='tiresize') 235
-            option(value='')
-              | 225
-            option(value='') 235
-            option(value='') 185
-            option(value='') 165
+            option(value='235') 235
+            option(value='225') 225
+            option(value='235') 235
       .input-control
         label(for='tirenumber') Number of tires
         input#tirenumber(name='tirenumber' type='number')
+        .error
+      .input-control
+        label(for='tirepunctureprice') Price of puncture
+        input#tirepunctureprice(name='tirepunctureprice' type='number')
         .error
       button(type='submit') Enter Purchase
 script(src='/js/Tire Input.js')

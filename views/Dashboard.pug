@@ -112,7 +112,7 @@ main
             .skill
               .outer
                 .inner
-                  #number 2%
+                  #number #{tireCounts}
               svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
                 defs
                   lineargradient#GradientColor
@@ -120,9 +120,12 @@ main
                     stop(offset='100%' stop-='' color='#9733EE')
                 circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
           div
-            h4 2 of 100
+            h4 #{tireCounts} of 100
             br
-            p 3 Dunlop
+            p #{DunloptireCounts} Dunlop
+            p #{GoodYearTireCounts} Good Year
+            p #{ToyoTireCounts} Toyo Tire
+            p #{MichelinTireCounts} Michelin
       .dashboard-card
         .dashboard-card-top
           div
@@ -148,9 +151,12 @@ main
                   circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
             br
             div
-              h4 1 of 100
+              h4 #{batteryrentCounts} of 100
               br
-              p Battery1
+              p #{DunlopbatteryrentCounts} Dunlop
+              p #{GoodYearbatteryrentCounts} Good Year
+              p #{ToyobatteryrentCounts} Toyo Tire
+              p #{MichelinbatteryrentCounts} Michelin
           .prog-rent
             h5 Sold
             br
@@ -167,9 +173,12 @@ main
                   circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
             br
             div
-              h4 1 of 100
+              h4 #{batteryPruchaseCounts} of 100 
               br
-              p Battery1
+              p #{DunlopbatteryPruchaseCounts} Dunlop
+              p #{GoodYearbatteryPruchaseCounts} Good Year
+              p #{ToyobatteryPruchaseCounts} Toyo Tire
+              p #{MichelinbatteryPruchaseCounts} Michelin 
       .dashboard-card
         .dashboard-card-top
           div
@@ -200,6 +209,7 @@ main
           th.col Date In
           th.col Time Out
           th.col Date Out
+          th.col Amount 
           th.col Check Out
 
       tbody.table-group-divider
@@ -216,6 +226,7 @@ main
               td #{parking.timeIn}
               td #{parking.dateIn}
               td #{parking.timeOut}
+              td #{parking.dateOut}
               td #{parking.dateOut}
               td 
                a.btn.btn-warning(href="/api/dashboard/edit/"+parking._id) checkOut
@@ -236,6 +247,7 @@ main
           th.col NIN Number
           th.col Vehicle
           th.col Battery Type
+          th.col Amount
           th.col Barttery Number
           
       tbody.table-group-divider
@@ -247,6 +259,7 @@ main
               td #{Battery.nin}
               td #{Battery.vehicles}
               td #{Battery.batterytype}
+              td #{Battery.bartteryprice}
               td #{Battery.bartterynumber}
         else
           p there are no battery buyers
@@ -264,6 +277,7 @@ main
           th.col NIN Number
           th.col Vehicle
           th.col Battery Type
+          th.col Amount 
           th.col Barttery Number
           
       tbody.table-group-divider
@@ -275,6 +289,7 @@ main
               td #{Batteryrent.nin}
               td #{Batteryrent.vehicles}
               td #{Batteryrent.batterytype}
+              td #{Batteryrent.bartteryprice}
               td #{Batteryrent.bartterynumber}
         else
           p there are no battery buyers
@@ -291,7 +306,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -302,7 +317,7 @@ main
               td #{Tire.phoneNumber}
               td #{Tire.vehicles}
               td #{Tire.tiretype}
-              td #{Tire.tiresize}
+              td #{Tire.tireprice}
               td #{Tire.tirenumber}
         else
           p there are no battery buyers
@@ -319,7 +334,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -330,7 +345,7 @@ main
               td #{TirePressure.phoneNumber}
               td #{TirePressure.vehicles}
               td #{TirePressure.tiretype}
-              td #{TirePressure.tiresize}
+              td #{TirePressure.tireprice}
               td #{TirePressure.tirenumber}
         else
           p there are no pressure purchase
@@ -347,7 +362,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -358,7 +373,7 @@ main
               td #{TirePuncture.phoneNumber}
               td #{TirePuncture.vehicles}
               td #{TirePuncture.tiretype}
-              td #{TirePuncture.tiresize}
+              td #{TirePuncture.tirepunctureprice}
               td #{TirePunctures.tirenumber}
         else
           p there are no pressure purchase
@@ -375,7 +390,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount 
           th.col Tire Number
           
       tbody.table-group-divider
@@ -386,8 +401,8 @@ main
               td #{TireValve.phoneNumber}
               td #{TireValve.vehicles}
               td #{TireValve.tiretype}
-              td #{TireValve.tiresize}
-              td #{TireValve.tirenumber}
+              td #{TireValve.valveprice}
+              td #{TireValve.valvenumber}
         else
           p there are no tire valve buyers
   

@@ -27,9 +27,23 @@ router.get("/dashboard", async (req, res) => {
     const CoasterCounts = await Parking.countDocuments({ vehicles:"coaster" }) || 0;
     const bodaCounts = await Parking.countDocuments({ vehicles:"boda" }) || 0;
 
-    const tireCounts = await Parking.countDocuments() || 0;
-    const danloptireCounts = await Parking.countDocuments({ tiretype:"truck" }) || 0;
-    // const PersonalCarCounts = await Parking.countDocuments({ vehicles:"personalCar" }) || 0;
+    const tireCounts = await Tire.countDocuments() || 0;
+    const DunloptireCounts = await Tire.countDocuments({ tiretype:"Dunlop" }) || 0;
+    const GoodYearTireCounts = await Tire.countDocuments({ tiretype:"Good Year"}) || 0;
+    const ToyoTireCounts = await Tire.countDocuments({ tiretype:"Toyo Tire"}) || 0;
+    const MichelinTireCounts = await Tire.countDocuments({ tiretype:"Michelin"}) || 0;
+
+    const batteryrentCounts = await Batteryrent.countDocuments() || 0; 
+    const DunlopbatteryrentCounts = await Batteryrent.countDocuments({ batterytype:"Dunlop" }) || 0;
+    const GoodYearbatteryrentCounts = await Batteryrent.countDocuments({ batterytype:"Good Year"}) || 0;
+    const ToyobatteryrentCounts = await Batteryrent.countDocuments({ batterytype:"Toyo Tire"}) || 0;
+    const MichelinbatteryrentCounts = await Batteryrent.countDocuments({ batterytype:"Michelin"}) || 0;
+
+    const batteryPruchaseCounts = await Battery.countDocuments() || 0;
+    const DunlopbatteryPruchaseCounts = await Battery.countDocuments({ batterytype:"Dunlop" }) || 0;
+    const GoodYearbatteryPruchaseCounts = await Battery.countDocuments({ batterytype:"Good Year"}) || 0;
+    const ToyobatteryPruchaseCounts = await Battery.countDocuments({ batterytype:"Toyo Tire"}) || 0;
+    const MichelinbatteryPruchaseCounts = await Battery.countDocuments({ batterytype:"Michelin"}) || 0;
 
     let item3 = await Battery.find();
     let item4 = await Batteryrent.find();
@@ -63,12 +77,31 @@ router.get("/dashboard", async (req, res) => {
       TirePressures: item6,
       TirePunctures: item7,
       TireValves: item8,
+
       parkingCounts,
       taxiCounts,
       PersonalCarCounts,
       truckCounts,
       CoasterCounts,
       bodaCounts,
+
+      tireCounts,
+      DunloptireCounts,
+      GoodYearTireCounts,
+      ToyoTireCounts,
+      MichelinTireCounts,
+
+      batteryrentCounts,
+      DunlopbatteryrentCounts,
+      GoodYearbatteryrentCounts,
+      ToyobatteryrentCounts,
+      MichelinbatteryrentCounts,
+
+      batteryPruchaseCounts,
+      DunlopbatteryPruchaseCounts,
+      GoodYearbatteryPruchaseCounts,
+      ToyobatteryPruchaseCounts,
+      MichelinbatteryPruchaseCounts,
 
 
       // empAges: ages[0].totalAges,

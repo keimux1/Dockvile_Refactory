@@ -53,10 +53,14 @@ main
         img.shopping(src='/images/Header-Shopping chart.svg' alt='')
         img.img(src='/images/Header-img.png' alt='profile-pic')
   .button-section
-    button(type='submit') Tire Purchase
-    button(type='submit') Tire Pressure
-    button(type='submit') Puncture Fixing
-    button(type='submit') Valves
+    a(href="/api/tirepurchase") 
+      button(type='submit') Tire Purchase
+    a(href="/api/tirepressure") 
+      button(type='submit') Tire Pressure
+    a(href="/api/puncturefixing") 
+      button(type='submit' ) Puncture Fixing
+    a(href="/api/tirevalves") 
+      button(type='submit') Valves
   .container
     form#form(name="regtirevalves" method="POST" action='/api/regtirevalves')
       h4 valves
@@ -73,14 +77,17 @@ main
           label(for='vehicles') Choose a vehicle:
           select#vehicles(name='vehicles')
             option(value='truck') Truck
-            option(value='personalCar')
-              | Personal Car(below 5 seats)
+            option(value='personalCar') Personal Car(below 5 seats)
             option(value='taxi') Taxi(below 5 seats)
             option(value='coaster') Coaster(above 14 seats)
             option(value='boda') Boda
       .input-control
         label(for='valvenumber') Number of Valves
         input#valvenumber(name='valvenumber' type='number')
+        .error
+      .input-control
+        label(for='vulveprice') Price of Valves
+        input#valveprice(name='valveprice' type='number')
         .error
       button(type='submit') Purchase valves 
 script(src='/js/Tire Input.js')

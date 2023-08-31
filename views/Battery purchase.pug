@@ -53,8 +53,10 @@ main
         img.shopping(src='/images/Header-Shopping chart.svg' alt='')
         img.img(src='/images/Header-img.png' alt='profile-pic')
   .button-section
-    button(type='submit') Battery Purchase
-    button(type='submit') Battery Rent
+    a(href="/api/batterypurchase") 
+      button(type='submit') Battery Purchase
+    a(href="/api/batteryrent") 
+      button(type='submit') Battery Rent
   section
     .container
       form#form(name="batterypurchase" method="POST" action='/api/regbatterybuyer')
@@ -85,14 +87,17 @@ main
           .input-dropdown
             label(for='batterytype') Type of Battery:
             select#batterytype(name='batterytype')
-              option(value='truck') Good Year
-              option(value='personalCar')
-                | Dunlop
-              option(value='taxi') Toyo Tire
-              option(value='coaster') Michelin
+              option(value='Good Year') Good Year
+              option(value='Dunlop') Dunlop
+              option(value='Toyo Tire') Toyo Tire
+              option(value='Michelin') Michelin
         .input-control
           label(for='bartterynumber') Number of batteries
           input#bartterynumber(name='bartterynumber' type='number')
+          .error
+        .input-control
+          label(for='bartteryprice') Price of barttery
+          input#bartteryprice(name='bartteryprice' type='number')
           .error
         button(type='submit') Enter Purchase
     .product-grid
