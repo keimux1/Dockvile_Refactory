@@ -51,17 +51,11 @@ router.get("/dashboard", async (req, res) => {
     let item6 = await TirePressure.find();
     let item7 = await TirePuncture.find();
     let item8 = await TireValve.find();
-
-
-    // const vehicles2 = await Parking.countDocuments({personalCar: "personalCar"});
-    // req.session.vehicles = vehicles
-
     
-
-    //let amounts = await Parking.aggregate([
-    // {"$group": {_id: "$all" , totalAmounts: {$sum: "$amount"}}},
-    // ])
-    //req.session.amounts = amounts
+    let parkingAmounts = await Parking.aggregate([
+    {"$group": {_id: "$all" , totalParkingAmounts: {$sum: "$amount"}}},
+    ])
+    // req.session.amounts = amounts
 
 
     // let vehicles = await Parking.aggregate(
@@ -102,6 +96,8 @@ router.get("/dashboard", async (req, res) => {
       GoodYearbatteryPruchaseCounts,
       ToyobatteryPruchaseCounts,
       MichelinbatteryPruchaseCounts,
+
+      parkingAmounts
 
 
       // empAges: ages[0].totalAges,
