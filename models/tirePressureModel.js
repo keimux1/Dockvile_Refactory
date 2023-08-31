@@ -33,7 +33,7 @@ const TirePressureSchema = new mongoose.Schema({
         trim:true,
     },
     tireprice:{
-        type: String,
+        type: Number,
         required: true,
         trim:true,
     },

@@ -33,7 +33,7 @@ const BatterySchema = new mongoose.Schema({
         trim:true,
     },
     bartteryprice:{
-        type: String,
+        type: Number,
         required: true,
         trim:true,
     },

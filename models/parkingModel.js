@@ -54,7 +54,7 @@ const parkingSchema = new mongoose.Schema({
         trim:true,
     },
     parkingPrice:{
-        type: String,
+        type: Number,
         required: true,
         trim:true,
     },

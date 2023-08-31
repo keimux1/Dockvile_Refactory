@@ -53,9 +53,34 @@ router.get("/dashboard", async (req, res) => {
     let item8 = await TireValve.find();
     
     let parkingAmounts = await Parking.aggregate([
-    {"$group": {_id: "$all" , totalParkingAmounts: {$sum: "$amount"}}},
+    {"$group": {_id: "$all" , totalParkingAmounts: {$sum: "$parkingPrice"}}},
     ])
     // req.session.amounts = amounts
+
+    let batteryRentAmounts = await Batteryrent.aggregate([
+    {"$group": {_id: "$all" , totalbatteryRentAmounts: {$sum: "$bartteryprice"}}},
+    ])
+
+    let batterypurchaseAmounts = await Batteryrent.aggregate([
+    {"$group": {_id: "$all" , totalbatterypurchaseAmounts: {$sum: "$bartteryprice"}}},
+    ])
+
+    let TireAmounts = await Tire.aggregate([
+    {"$group": {_id: "$all" , totalTireAmount: {$sum: "$tireprice"}}},
+    ])
+
+    let TirePressureAmounts = await TirePressure.aggregate([
+    {"$group": {_id: "$all" , totalTirePressureAmount: {$sum: "$tireprice"}}},
+    ])
+
+    let TirePunctureAmounts = await TirePuncture.aggregate([
+    {"$group": {_id: "$all" , totalTirePunctureAmount: {$sum: "$tirepunctureprice"}}},
+    ])
+
+    let TireValvesAmounts = await TireValve.aggregate([
+      {"$group": {_id: "$all" , totalTireValvesAmount: {$sum: "$valveprice"}}},
+    ])
+  
 
 
     // let vehicles = await Parking.aggregate(
@@ -97,12 +122,14 @@ router.get("/dashboard", async (req, res) => {
       ToyobatteryPruchaseCounts,
       MichelinbatteryPruchaseCounts,
 
-      parkingAmounts
+      parkingAmounts:parkingAmounts[0].totalParkingAmounts,
+      batteryRentAmounts:batteryRentAmounts[0].totalbatteryRentAmounts,
+      batterypurchaseAmounts:batterypurchaseAmounts[0].totalbatterypurchaseAmounts,
+      TireAmounts:TireAmounts[0].totalTireAmount,
+      TirePressureAmounts:TirePressureAmounts[0].totalTirePressureAmount,
+      TirePunctureAmounts:TirePunctureAmounts[0].totalTirePunctureAmount,
+      TireValvesAmounts:TireValvesAmounts[0].totalTireValvesAmount,
 
-
-      // empAges: ages[0].totalAges,
-
-      // taxi:vehicles[0].numberOfTaxi,
     });
   } catch (error) {
     console.log(error);

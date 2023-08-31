@@ -33,7 +33,7 @@ const punctureFixingSchema = new mongoose.Schema({
         trim:true,
     },
     tirepunctureprice:{
-        type: String,
+        type: Number,
         required: true,
         trim:true,
     },

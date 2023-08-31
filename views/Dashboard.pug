@@ -75,7 +75,7 @@ main
             p Parking
             h2
               | Ugx 
-              span 240000
+              span #{parkingAmounts} 
           img(src='/images/Upward Trend.svg' alt='')
         br
         .card-stats
@@ -104,7 +104,12 @@ main
             p Tire
             h2
               | Ugx 
-              span 40000
+              //- - var totalTirepurchase = #{TireAmounts} 
+              //- - var totalTirepressure = #{TirePressureAmounts}
+              //- - var totalTirePuncture = #{TirePunctureAmounts} 
+              //- - var totalTireValves = #{TirePunctureAmounts}
+              //- - var totalTire = totalTirepurchase + totalTirepressure + totalTirePuncture + totalTireValves
+              span #{TireAmounts}
           img(src='/images/Upward Trend.svg' alt='')
         br
         .card-stats
@@ -132,7 +137,7 @@ main
             p Battery
             h2
               | Ugx 
-              span 240000
+              span #{batterypurchaseAmounts}
           img(src='/images/Upward Trend.svg' alt='')
         .card-stats-battery
           .prog-rent
@@ -185,7 +190,11 @@ main
             p Total Revenue 
             h2
               | Ugx 
-              span 240000
+              span 
+                - var x= 3
+                - var y= 3
+                - var totalRevenue= x + y
+                = totalRevenue
         .graph
           canvas#myChart(width='40' height='40')
           script(src='/js/graph.js')

@@ -23,7 +23,7 @@ const TirevalveSchema = new mongoose.Schema({
         trim:true,
     },
     valveprice:{
-        type: String,
+        type: Number,
         required: true,
         trim:true,
     },
