@@ -8,15 +8,15 @@ head
   link(rel='stylesheet' href='/css/parking.css')
 
   script.
-    function insertDate() {
+    function insertDateIn() {
     var now = new Date();
     var date = now.toLocaleDateString();
-    document.getElementById("dateIn").value = String(date);
+    document.getElementById("dateIn").value = date.toString();
     }
-    function insertTime() {
+    function insertTimeIn() {
       var now = new Date();
       var time = now.toLocaleTimeString();
-      document.getElementById("timeIn").value = String(time);
+      document.getElementById("timeIn").value = time.toString();
     }
 
 nav.navbar1
@@ -65,7 +65,7 @@ main
         img.img(src='/images/Header-img.png' alt='profile-pic')
   section
     .container
-      form#form(name="parkingform" method="POST" action='/api/regparking')
+      form#form(name="parkingform" method="POST" action="/regparking")
         h1 Registration
         .input-control
           label(for='fullName') Full Name
@@ -87,13 +87,13 @@ main
           .input-dropdown
             label(for='vehicles') Choose a vehicle:
             select#vehicles(name='vehicles')
-              option(value='truck') Truck
+              option(value='truck' ) Truck
               option(value='personalCar')
-                | Personal Car(below 5 seats)
+                | Personal Car(below 5 seats )
               option(value='taxi') Taxi(below 5 seats)
               option(value='coaster') Coaster(above 14 seats)
               option(value='boda') Boda
-          .input-color
+        .input-color
             label(for='color') Color:
             input#color(type='color' name='color')
         .input-control-special
@@ -103,36 +103,39 @@ main
               option(disabled="disabled") 
               option( style="background-color: rgb(12, 100, 100)" disabled="disabled") Coster
               option(value='4000' style="background-color: rgb(40, 166, 166)") Coster Day
-              option(value='2000' style="background-color: rgb(40, 166, 166)") Coster Night
-              option(value='3000' style="background-color: rgb(40, 166, 166)") Coster less than 3 hours
+              option(value='2000'  style="background-color: rgb(40, 166, 166)") Coster Night
+              option(value='3000'  style="background-color: rgb(40, 166, 166)") Coster less than 3 hours
               option(disabled="disabled") 
               option(style="background-color: rgb(18, 78, 38)" disabled="disabled") Taxi,PersonalCar,Truck
-              option(value='3000' style="background-color: rgb(50, 168, 89)") Day parking
-              option(value='2000' style="background-color: rgb(50, 168, 89)") Night Parking
-              option(value='2000' style="background-color: rgb(50, 168, 89)") less than 3 hours
+              option(value='3000'  style="background-color: rgb(50, 168, 89)") Day parking
+              option(value='2000'  style="background-color: rgb(50, 168, 89)") Night Parking
+              option(value='2000'  style="background-color: rgb(50, 168, 89)") less than 3 hours
               option(disabled="disabled") 
               option(style="background-color: rgb(22, 69, 79)" disabled="disabled") Boda
               option(value='2000' style="background-color: rgb(63, 180, 207)") Boda Day
-              option(value='2000' style="background-color: rgb(63, 180, 207)") Boda Night
-              option(value='1000' style="background-color: rgb(63, 180, 207)") Boda less than 3 hours
+              option(value='2000'  style="background-color: rgb(63, 180, 207)") Boda Night
+              option(value='1000'  style="background-color: rgb(63, 180, 207)") Boda less than 3 hours
+        
         .input-control
           label(for='parkingSlot') Assign Parking Slot
           input#parkingSlot(name='parkingSlot' type='text')
           .error
         .input-control
           //time in
-          input#timeIn(name='timeIn' type='hidden' )
+          //label(for='timeIn') Time In
+          input#timeIn(name='timeIn' type='hidden')
         .input-control
           //Date in
+          //label(for='dateIn') Date In
           input#dateIn(name='dateIn' type='hidden')
         .input-control
-          //time out
-          input#timeOut(name='timeIn' type='hidden')
+          //time Out
+          input#timeOut(name='timeOut' type='hidden')
         .input-control
           //Date Out
-          input#dateOut(name='dateIn' type='hidden')
+          input#dateOut(name='dateOut' type='hidden')
 
-        button(onclick='insertDate(); insertTime();' type='submit') Check In
+        button(onclick='insertDateIn(); insertTimeIn();' type='submit') Check Out
 
     .available-parking-section
       .available-parking-slots

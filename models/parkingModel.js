@@ -37,7 +37,7 @@ const parkingSchema = new mongoose.Schema({
     },
     timeIn:{
         type: String,
-        required: true,
+        // required: true,
         trim:true,
     },
     dateIn:{
