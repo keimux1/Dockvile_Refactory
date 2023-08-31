@@ -24,10 +24,14 @@ const TireSchema = new mongoose.Schema({
     },
     tiresize:{
         type: String,
-        required: true,
         trim:true,
     },
     tirenumber:{
+        type: String,
+        required: true,
+        trim:true,
+    },
+    tireprice:{
         type: String,
         required: true,
         trim:true,

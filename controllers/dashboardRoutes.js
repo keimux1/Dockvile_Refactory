@@ -27,6 +27,10 @@ router.get("/dashboard", async (req, res) => {
     const CoasterCounts = await Parking.countDocuments({ vehicles:"coaster" }) || 0;
     const bodaCounts = await Parking.countDocuments({ vehicles:"boda" }) || 0;
 
+    const tireCounts = await Parking.countDocuments() || 0;
+    const danloptireCounts = await Parking.countDocuments({ tiretype:"truck" }) || 0;
+    // const PersonalCarCounts = await Parking.countDocuments({ vehicles:"personalCar" }) || 0;
+
     let item3 = await Battery.find();
     let item4 = await Batteryrent.find();
     let item5 = await Tire.find();
