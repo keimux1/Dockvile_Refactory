@@ -1,7 +1,7 @@
 const express = require("express");
 const Parking = require("../models/parkingModel");
 const router = express.Router();
-// const {ensureLoggedIn} = require("connect-ensure-login");
+const {ensureLoggedIn} = require("connect-ensure-login");
 
 router.get("/parking", (req,res)=>{
   res.render("parking.pug")

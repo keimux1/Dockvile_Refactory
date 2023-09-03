@@ -8,7 +8,7 @@ const TirePressure = require("../models/tirePressureModel");
 const TirePuncture = require("../models/punctureFixingModel");
 const TireValve = require("../models/tirevalvesModel");
 const router = express.Router();
-// const {ensureLoggedIn} = require("connect-ensure-login");
+const {ensureLoggedIn} = require("connect-ensure-login");
 
 
 router.get("/editparking", (req, res) => {
@@ -16,7 +16,7 @@ router.get("/editparking", (req, res) => {
 });
 
 
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard",ensureLoggedIn, async (req, res) => {
   try {
     let item1 = await Employee.find();
     let item2 = await Parking.find();
