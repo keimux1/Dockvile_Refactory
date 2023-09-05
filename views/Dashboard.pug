@@ -10,38 +10,51 @@ head
   link(rel='stylesheet' href='/css/header.css')
   link(rel='stylesheet' href='/css/parking.css')
   link(rel='stylesheet' href='/css/dashboard.css')
+
+  script.
+    function insertDate() {
+    var now = new Date();
+    var date = now.toLocaleDateString();
+    document.getElementById("dateOut").value = date;
+    }
+    function insertTime() {
+      var now = new Date();
+      var time = now.toLocaleTimeString();
+      document.getElementById("timeOut").value = time;
+    }
+
 nav.navbar1
   .logo
     img(src='/images/Dockvile Logo.png' alt='')
   .nav-items
     ul
       li
-        a(href='')
+        a(href='/api/parking')
           .silent-space
             span t
           img(src='/images/Parking icon.svg' alt='')
           p Parking
       li
-        a(href='')
+        a(href='/api/tirepurchase')
           .silent-space
             span t
           img(src='/images/tire icon.svg' alt='')
           p Tire
       li
-        a(href='')
+        a(href='/api/batterypurchase')
           .silent-space
             span t
           img(src='/images/battery icon.svg' alt='')
           p Battery
       li
-        a(href='')
+        a(href='/api/dashboard')
           .silent-space
             span t
           img(src='/images/dash board icon.svg' alt='')
           p Dashboard
     ul
       li
-        a(href='')
+        a(href='/api/logOut')
           .silent-space
             span t
           img(src='/images/simple-line-icons_logout.svg' alt='')
@@ -62,7 +75,7 @@ main
             p Parking
             h2
               | Ugx 
-              span 240000
+              span #{parkingAmounts} 
           img(src='/images/Upward Trend.svg' alt='')
         br
         .card-stats
@@ -70,7 +83,7 @@ main
             .skill
               .outer
                 .inner
-                  #number
+                  #{parkingCounts} 
               svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
                 defs
                   lineargradient#GradientColor
@@ -78,20 +91,25 @@ main
                     stop(offset='100%' stop-='' color='#9733EE')
                 circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
           div
-            h4 115 of 200
+            h4 #{parkingCounts} of 200
             br
-            p 30Truks
-            p 30 personal Cars
-            p 12 Taxis
-            p 2 Coasters
-            p 15 Bodas
+            p #{truckCounts}Truks
+            p #{PersonalCarCounts} personal Cars
+            p #{taxiCounts} Taxis
+            p #{CoasterCounts} Coasters
+            p #{bodaCounts} Bodas
       .dashboard-card
         .dashboard-card-top
           div
             p Tire
             h2
               | Ugx 
-              span 40000
+              //- - var totalTirepurchase = #{TireAmounts} 
+              //- - var totalTirepressure = #{TirePressureAmounts}
+              //- - var totalTirePuncture = #{TirePunctureAmounts} 
+              //- - var totalTireValves = #{TirePunctureAmounts}
+              //- - var totalTire = totalTirepurchase + totalTirepressure + totalTirePuncture + totalTireValves
+              span #{TireAmounts}
           img(src='/images/Upward Trend.svg' alt='')
         br
         .card-stats
@@ -99,7 +117,7 @@ main
             .skill
               .outer
                 .inner
-                  #number 2%
+                  #number #{tireCounts}
               svg(xmlns='http://www.w3.org/2000/svg' version='1.1' width='160px' height='160px')
                 defs
                   lineargradient#GradientColor
@@ -107,16 +125,19 @@ main
                     stop(offset='100%' stop-='' color='#9733EE')
                 circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
           div
-            h4 2 of 100
+            h4 #{tireCounts} of 100
             br
-            p 3 Dunlop
+            p #{DunloptireCounts} Dunlop
+            p #{GoodYearTireCounts} Good Year
+            p #{ToyoTireCounts} Toyo Tire
+            p #{MichelinTireCounts} Michelin
       .dashboard-card
         .dashboard-card-top
           div
             p Battery
             h2
               | Ugx 
-              span 240000
+              span #{batterypurchaseAmounts}
           img(src='/images/Upward Trend.svg' alt='')
         .card-stats-battery
           .prog-rent
@@ -135,9 +156,12 @@ main
                   circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
             br
             div
-              h4 1 of 100
+              h4 #{batteryrentCounts} of 100
               br
-              p Battery1
+              p #{DunlopbatteryrentCounts} Dunlop
+              p #{GoodYearbatteryrentCounts} Good Year
+              p #{ToyobatteryrentCounts} Toyo Tire
+              p #{MichelinbatteryrentCounts} Michelin
           .prog-rent
             h5 Sold
             br
@@ -154,16 +178,23 @@ main
                   circle(cx='47.5' cy='47.5' r='42' stroke-linecap='round')
             br
             div
-              h4 1 of 100
+              h4 #{batteryPruchaseCounts} of 100 
               br
-              p Battery1
+              p #{DunlopbatteryPruchaseCounts} Dunlop
+              p #{GoodYearbatteryPruchaseCounts} Good Year
+              p #{ToyobatteryPruchaseCounts} Toyo Tire
+              p #{MichelinbatteryPruchaseCounts} Michelin 
       .dashboard-card
         .dashboard-card-top
           div
             p Total Revenue 
             h2
               | Ugx 
-              span 240000
+              span 
+                - var z = 6
+                - var y= 3
+                - var totalRevenue= x + z
+                = totalRevenue
         .graph
           canvas#myChart(width='40' height='40')
           script(src='/js/graph.js')
@@ -183,9 +214,14 @@ main
           th.col Vehicle
           th.col Color
           th.col Parking Slot
-          th.col Time Out
+          th.col Time In
           th.col Date In
-          
+          th.col Time Out
+          th.col Date Out
+          th.col Amount 
+          th.col Check Out
+          th.col Receipt
+
       tbody.table-group-divider
         if parkings.length
           each parking in parkings
@@ -199,6 +235,15 @@ main
               td #{parking.parkingSlot}
               td #{parking.timeIn}
               td #{parking.dateIn}
+              td #{parking.timeOut}
+              td #{parking.dateOut}
+              td #{parking.parkingPrice}
+              td 
+                a.btn.btn-warning(href="/api/dashboard/edit/"+parking._id) checkOut
+              td
+                a.btn.btn-primary(href="/api/dashboard/receipt/"+parking._id) Receipt
+
+
         else
           p there are no cars parked
   br
@@ -215,6 +260,7 @@ main
           th.col NIN Number
           th.col Vehicle
           th.col Battery Type
+          th.col Amount
           th.col Barttery Number
           
       tbody.table-group-divider
@@ -226,6 +272,7 @@ main
               td #{Battery.nin}
               td #{Battery.vehicles}
               td #{Battery.batterytype}
+              td #{Battery.bartteryprice}
               td #{Battery.bartterynumber}
         else
           p there are no battery buyers
@@ -243,6 +290,7 @@ main
           th.col NIN Number
           th.col Vehicle
           th.col Battery Type
+          th.col Amount 
           th.col Barttery Number
           
       tbody.table-group-divider
@@ -254,34 +302,7 @@ main
               td #{Batteryrent.nin}
               td #{Batteryrent.vehicles}
               td #{Batteryrent.batterytype}
-              td #{Batteryrent.bartterynumber}
-        else
-          p there are no battery buyers
-  br
-  //- Battery Rent
-  .table-analytics(style='margin: 24px 24px ')
-    h5 
-        strong Battery Rent table
-
-    table.table
-      thead
-        tr
-          th.col Name
-          th.col Phone Number
-          th.col NIN Number
-          th.col Vehicle
-          th.col Battery Type
-          th.col Barttery Number
-          
-      tbody.table-group-divider
-        if Batteryrents.length
-          each Batteryrent in Batteryrents
-            tr
-              td #{Batteryrent.fullName}
-              td #{Batteryrent.phoneNumber}
-              td #{Batteryrent.nin}
-              td #{Batteryrent.vehicles}
-              td #{Batteryrent.batterytype}
+              td #{Batteryrent.bartteryprice}
               td #{Batteryrent.bartterynumber}
         else
           p there are no battery buyers
@@ -298,7 +319,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -309,7 +330,7 @@ main
               td #{Tire.phoneNumber}
               td #{Tire.vehicles}
               td #{Tire.tiretype}
-              td #{Tire.tiresize}
+              td #{Tire.tireprice}
               td #{Tire.tirenumber}
         else
           p there are no battery buyers
@@ -326,7 +347,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -337,7 +358,7 @@ main
               td #{TirePressure.phoneNumber}
               td #{TirePressure.vehicles}
               td #{TirePressure.tiretype}
-              td #{TirePressure.tiresize}
+              td #{TirePressure.tireprice}
               td #{TirePressure.tirenumber}
         else
           p there are no pressure purchase
@@ -354,7 +375,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount
           th.col Tire Number
           
       tbody.table-group-divider
@@ -365,7 +386,7 @@ main
               td #{TirePuncture.phoneNumber}
               td #{TirePuncture.vehicles}
               td #{TirePuncture.tiretype}
-              td #{TirePuncture.tiresize}
+              td #{TirePuncture.tirepunctureprice}
               td #{TirePunctures.tirenumber}
         else
           p there are no pressure purchase
@@ -382,7 +403,7 @@ main
           th.col Phone Number
           th.col Vehicle
           th.col Tire Type
-          th.col Tire Size
+          th.col Amount 
           th.col Tire Number
           
       tbody.table-group-divider
@@ -393,8 +414,8 @@ main
               td #{TireValve.phoneNumber}
               td #{TireValve.vehicles}
               td #{TireValve.tiretype}
-              td #{TireValve.tiresize}
-              td #{TireValve.tirenumber}
+              td #{TireValve.valveprice}
+              td #{TireValve.valvenumber}
         else
           p there are no tire valve buyers
   

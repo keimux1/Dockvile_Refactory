@@ -7,38 +7,39 @@ head
   link(rel='stylesheet' href='/css/header.css')
   link(rel='stylesheet' href='/css/tire.css')
   link(rel='stylesheet' href='/css/Shoping grid.css')
+
 nav.navbar1
   .logo
     img(src='/images/Dockvile Logo.png' alt='')
   .nav-items
     ul
       li
-        a(href='')
+        a(href='/api/parking')
           .silent-space
             span t
           img(src='/images/Parking icon.svg' alt='')
           p Parking
       li
-        a(href='')
+        a(href='/api/tirepurchase')
           .silent-space
             span t
           img(src='/images/tire icon.svg' alt='')
           p Tire
       li
-        a(href='')
+        a(href='/api/batterypurchase')
           .silent-space
             span t
           img(src='/images/battery icon.svg' alt='')
           p Battery
       li
-        a(href='')
+        a(href='/api/dashboard')
           .silent-space
             span t
           img(src='/images/dash board icon.svg' alt='')
           p Dashboard
     ul
       li
-        a(href='')
+        a(href='/api/logIn')
           .silent-space
             span t
           img(src='/images/simple-line-icons_logout.svg' alt='')
@@ -52,8 +53,10 @@ main
         img.shopping(src='/images/Header-Shopping chart.svg' alt='')
         img.img(src='/images/Header-img.png' alt='profile-pic')
   .button-section
-    button(type='submit') Battery Purchase
-    button(type='submit') Battery Rent
+    a(href="/api/batterypurchase") 
+      button(type='submit') Battery Purchase
+    a(href="/api/batteryrent") 
+      button(type='submit') Battery Rent
   section
     .container
       form#form(name="batterypurchase" method="POST" action='/api/regbatterybuyer')
@@ -84,14 +87,17 @@ main
           .input-dropdown
             label(for='batterytype') Type of Battery:
             select#batterytype(name='batterytype')
-              option(value='truck') Good Year
-              option(value='personalCar')
-                | Dunlop
-              option(value='taxi') Toyo Tire
-              option(value='coaster') Michelin
+              option(value='Good Year') Good Year
+              option(value='Dunlop') Dunlop
+              option(value='Toyo Tire') Toyo Tire
+              option(value='Michelin') Michelin
         .input-control
           label(for='bartterynumber') Number of batteries
           input#bartterynumber(name='bartterynumber' type='number')
+          .error
+        .input-control
+          label(for='bartteryprice') Price of barttery
+          input#bartteryprice(name='bartteryprice' type='number')
           .error
         button(type='submit') Enter Purchase
     .product-grid

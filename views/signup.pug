@@ -20,6 +20,12 @@ head
       label(for='phoneNumber') Phone Number
       input#phoneNumber(name='phoneNumber' type='text')
       .error
+    .input-control-special
+          .input-dropdown
+            label(for='role') Role:
+            select(name='role')
+              option(value='manager' ) Manager 
+              option(value='employee') Employee 
     .input-control  
       label(for='password') Password
       input#password(name='password' type='password')

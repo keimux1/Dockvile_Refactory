@@ -37,11 +37,24 @@ const parkingSchema = new mongoose.Schema({
     },
     timeIn:{
         type: String,
-        required: true,
+        // required: true,
         trim:true,
     },
     dateIn:{
         type: String,
+        required: true,
+        trim:true,
+    },
+    timeOut:{
+        type: String,
+        trim:true,
+    },
+    dateOut:{
+        type: String,
+        trim:true,
+    },
+    parkingPrice:{
+        type: Number,
         required: true,
         trim:true,
     },
