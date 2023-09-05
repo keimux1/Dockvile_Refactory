@@ -2,7 +2,7 @@ const express = require("express");
 const Employee = require("../models/employeeModel");
 const passport = require("passport");
 const router = express.Router();
-// const {ensureLoggedIn} = require("connect-ensure-login");
+//const {ensureLoggedIn} = require("connect-ensure-login");
 
 router.get("/signUp", (req, res) => {
   console.log("signing ur the new employee");
@@ -27,25 +27,32 @@ router.get("/logIn", (req, res) => {
   res.render("Dockvile_login");
 });
 
-// router.post("/login", passport.authenticate("local",
-// {failureRedirect:"/api/logIn"}),
-// (req, res) => {
-// req.session.user = req.user
-// let loggedInuser = req.session.user.fullName;
-// console.log(loggedInuser);
-// if (req.session.user.role === "manager" ){
-//   res.redirect("/api/parking")
-// } else if (req.session.user.role === "employee"){
-//   res.redirect("/api/parking")
-// }
-// });
-
-router.post("/login",passport.authenticate("local", { failureRedirect: "/api/logIn" }),
+router.post( "/login",passport.authenticate("local", { failureRedirect: "/api/logIn" }),
   (req, res) => {
     req.session.user = req.user;
-    res.redirect("/api/parking");
+    let loggedInuser = req.session.user.fullName;
+    console.log(loggedInuser);
+    if (req.session.user.role ==="manager") {
+      res.redirect("/api/dashboard");
+    }
+    if (req.session.user.role ==="employee") {
+      res.redirect("/api/parking");
+    }
   }
 );
+
+// router.post("/login",passport.authenticate("local", { failureRedirect: "/api/logIn" }),
+//   (req, res) => {
+//     req.session.user = req.user;
+//     res.redirect("/api/parking");
+//   }
+// );
+
+router.get("/logOut", (req, res) => {
+   req.session.destroy(
+    res.redirect("/api/logIn")
+   );
+});
 
 //delete employees
 router.post("/employee/delete", async (req, res) => {

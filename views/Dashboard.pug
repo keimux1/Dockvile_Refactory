@@ -54,7 +54,7 @@ nav.navbar1
           p Dashboard
     ul
       li
-        a(href='/api/logIn')
+        a(href='/api/logOut')
           .silent-space
             span t
           img(src='/images/simple-line-icons_logout.svg' alt='')
@@ -191,9 +191,9 @@ main
             h2
               | Ugx 
               span 
-                - var x= 3
+                - var z = 6
                 - var y= 3
-                - var totalRevenue= x + y
+                - var totalRevenue= x + z
                 = totalRevenue
         .graph
           canvas#myChart(width='40' height='40')
@@ -220,6 +220,7 @@ main
           th.col Date Out
           th.col Amount 
           th.col Check Out
+          th.col Receipt
 
       tbody.table-group-divider
         if parkings.length
@@ -238,7 +239,10 @@ main
               td #{parking.dateOut}
               td #{parking.parkingPrice}
               td 
-               a.btn.btn-warning(href="/api/dashboard/edit/"+parking._id) checkOut
+                a.btn.btn-warning(href="/api/dashboard/edit/"+parking._id) checkOut
+              td
+                a.btn.btn-primary(href="/api/dashboard/receipt/"+parking._id) Receipt
+
 
         else
           p there are no cars parked

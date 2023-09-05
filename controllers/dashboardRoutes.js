@@ -15,8 +15,7 @@ router.get("/editparking", (req, res) => {
   res.render("editparking");
 });
 
-
-router.get("/dashboard",ensureLoggedIn, async (req, res) => {
+router.get("/dashboard", ensureLoggedIn('/api/login'), async (req, res) => {
   try {
     let item1 = await Employee.find();
     let item2 = await Parking.find();
@@ -161,5 +160,15 @@ router.post('/dashboard/edit', async (req, res) => {
 
   }
 })
+
+router.get("/dashboard/receipt/:id", async(req, res) => {
+  try {
+    const park = await Parking.findOne({_id: req.params.id });
+    res.render("receipt",{parking: park});
+  }catch(error) {
+    res.status(404).send("Sorry couldnot edit table");
+    console.log(error);
+  }
+});
 
 module.exports = router;
